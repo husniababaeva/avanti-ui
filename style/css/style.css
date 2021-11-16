@@ -10,11 +10,11 @@
 
 body {
   font-family: "Comfortaa";
-  background-color: #ECECE9;
+  background-color: #eaeaeb;
 }
 
 main h3 {
-  font-size: 70px;
+  font-size: 60px;
 }
 
 .logo {
@@ -22,27 +22,24 @@ main h3 {
   font-weight: bold;
 }
 
-.overlay {
-  background: rgba(255, 255, 255, 0.365);
-  backdrop-filter: blur(10.5px);
-  -webkit-backdrop-filter: blur(11.5px);
+#header {
+  background-color: #ffffff2a;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  width: 100%;
+  z-index: 999999;
 }
 
-header {
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-header ul li {
+#header ul li {
   position: relative;
 }
 
-header ul li a {
+#header ul li a {
   color: #000000;
   text-decoration: none;
 }
 
-header ul li ul {
+#header ul li ul {
   display: none;
   position: absolute;
   overflow: auto;
@@ -50,8 +47,18 @@ header ul li ul {
   background-color: #000000;
 }
 
-header ul li:hover ul {
+#header ul li:hover ul {
   display: block;
+}
+
+.header h3 {
+  font-size: 60px;
+}
+
+.header .img-header {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
 }
 
 .menu-button {
@@ -74,8 +81,8 @@ header ul li:hover ul {
   height: 1px;
   display: block;
   background: #040404;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .menu-button-icon:before, .menu-button-icon:after {
@@ -85,8 +92,8 @@ header ul li:hover ul {
   height: 100%;
   display: block;
   background: #000;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .menu-button-icon:before {
@@ -117,8 +124,8 @@ header ul li:hover ul {
   display: block;
   text-decoration: none;
   color: #fff;
-  -webkit-transition: color .2s;
-  transition: color .2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .menu a:hover {
@@ -156,11 +163,36 @@ header ul li:hover ul {
   visibility: visible;
 }
 
-.ellipse {
-  width: 100px;
-  height: 100px;
-  background: #d3ff22;
-  -webkit-filter: blur(80px);
-          filter: blur(80px);
+.gradient {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gradient.purple {
+  top: -177px;
+  left: calc(50% - 544px);
+  width: 737px;
+  height: 593px;
+  background: radial-gradient(50% 50% at 50% 50%, #f3ddf9 0, rgba(220, 193, 228, 0) 100%);
+}
+
+.gradient.orange {
+  position: absolute;
+  top: -391px;
+  left: calc(50% - 258px);
+  width: 931px;
+  height: 870px;
+  background: radial-gradient(50% 50% at 50% 50%, #ffbd94 0, rgba(230, 155, 108, 0) 100%);
+}
+
+.gradient.yellow {
+  top: -93px;
+  left: calc(50% - 432px);
+  width: 773px;
+  height: 704px;
+  background: radial-gradient(50% 50% at 50% 50%, #ffe4b9 0, rgba(244, 206, 148, 0) 100%);
 }
 /*# sourceMappingURL=style.css.map */
