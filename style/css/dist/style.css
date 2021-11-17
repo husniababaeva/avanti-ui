@@ -7,13 +7,17 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Comfortaa";
-  background-color: #eaeaeb;
+  background-color: #ececed;
 }
 
 main h3 {
-  font-size: 60px;
+  font-size: 65px;
 }
 
 .logo {
@@ -21,9 +25,14 @@ main h3 {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+}
+
 #header {
-  background-color: #ffffff2a;
-  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0px;
+  background-color: none !important;
   width: 100%;
   z-index: 999999;
 }
@@ -46,7 +55,7 @@ main h3 {
 }
 
 .header h3 {
-  font-size: 60px;
+  font-size: 65px;
 }
 .header .img-header {
   object-fit: contain;
@@ -54,10 +63,8 @@ main h3 {
 }
 
 .menu-button {
-  position: absolute;
   z-index: 2;
   width: 40px;
-  height: 40px;
   border-radius: 50%;
   transition: box-shadow 1.2s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: pointer;
@@ -145,26 +152,87 @@ main h3 {
 }
 
 .gradient.purple {
-  top: -177px;
-  left: calc(50% - 544px);
-  width: 737px;
-  height: 593px;
-  background: radial-gradient(50% 50% at 50% 50%, #f3ddf9 0, rgba(220, 193, 228, 0) 100%);
+  position: fixed;
+  top: -150px;
+  left: calc(30% - 544px);
+  width: 100%;
+  height: 650px;
+  background: radial-gradient(50% 50% at 50% 50%, #cf9fdc 0, rgba(220, 193, 228, 0) 100%);
 }
 
 .gradient.orange {
-  position: absolute;
+  position: fixed;
+  display: block;
   top: -391px;
-  left: calc(50% - 258px);
-  width: 931px;
+  left: calc(30% - 858px);
+  width: 100%;
   height: 870px;
   background: radial-gradient(50% 50% at 50% 50%, #ffbd94 0, rgba(230, 155, 108, 0) 100%);
 }
 
 .gradient.yellow {
+  position: fixed;
   top: -93px;
-  left: calc(50% - 432px);
-  width: 773px;
+  left: calc(30% - 432px);
+  width: 100%;
   height: 704px;
   background: radial-gradient(50% 50% at 50% 50%, #ffe4b9 0, rgba(244, 206, 148, 0) 100%);
+}
+
+a .fab {
+  color: #484646;
+  padding: 15px 16px;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-right: 15px;
+  border: 1px solid #484646;
+  transition: all 0.4s;
+}
+a .fab:hover {
+  color: #2e2e2e;
+  opacity: 0.9;
+  transform: rotate(360deg);
+}
+
+.gradient-wrapper {
+  position: absolute;
+  left: 50%;
+}
+
+.arrow-element {
+  width: 50px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.btn-read-more {
+  background-image: linear-gradient(to right, #fa8871af, #f4d7f5);
+  box-shadow: rgba(100, 100, 111, 0.523) 0px 7px 29px 0px;
+  margin: 10px;
+  padding: 15px 45px;
+  transition: all 0.3s ease-in-out;
+  background-size: 200% auto;
+  color: #4a4747;
+  border-radius: 100px;
+  display: block;
+}
+.btn-read-more:hover {
+  transform: translatey(10px);
+  box-shadow: none;
+  color: white;
+}
+.btn-read-more:active {
+  opacity: 0.5;
+}
+
+.line-bottom {
+  border-bottom: 1px solid #fe9b5d;
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .arrow-element {
+    width: 40px;
+  }
 }

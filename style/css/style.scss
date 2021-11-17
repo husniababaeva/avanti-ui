@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap");
+// @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
 
 $comfortaa-font: "Comfortaa";
 
 $fs-lg-25: 25px;
-$fs-lg-50: 60px;
+$fs-lg-50: 65px;
 
 $text-black: #000000;
 
@@ -24,11 +25,14 @@ $h-100per: 100vh;
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: $comfortaa-font;
-  background-color: #eaeaeb;
+  background-color: #ececed;
 }
+
 main h3 {
   font-size: $fs-lg-50;
 }
@@ -36,10 +40,12 @@ main h3 {
   font-size: $fs-lg-25;
   font-weight: bold;
 }
-
+a{text-decoration: none;}
 #header {
-  background-color: #ffffff2a;
-  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0px;
+  background-color: none !important;
+  //   backdrop-filter: blur(4px);
   width: 100%;
   z-index: $z;
   ul {
@@ -67,16 +73,14 @@ main h3 {
     font-size: $fs-lg-50;
   }
   .img-header {
-      object-fit: contain;
-      width: 100%;
+    object-fit: contain;
+    width: 100%;
   }
 }
 
 .menu-button {
-  position: absolute;
   z-index: 2;
   width: 40px;
-  height: 40px;
   border-radius: 50%;
   transition: box-shadow 1.2s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: pointer;
@@ -167,22 +171,24 @@ main h3 {
 }
 
 .gradient.purple {
-  top: -177px;
-  left: calc(50% - 544px);
-  width: 737px;
-  height: 593px;
+  position: fixed;
+  top: -150px;
+  left: calc(30% - 544px);
+  width: 100%;
+  height: 650px;
   background: radial-gradient(
     50% 50% at 50% 50%,
-    #f3ddf9 0,
+    #cf9fdc 0,
     rgba(220, 193, 228, 0) 100%
   );
 }
 
 .gradient.orange {
-  position: absolute;
+  position: fixed;
+  display: block;
   top: -391px;
-  left: calc(50% - 258px);
-  width: 931px;
+  left: calc(30% - 858px);
+  width: 100%;
   height: 870px;
   background: radial-gradient(
     50% 50% at 50% 50%,
@@ -192,13 +198,72 @@ main h3 {
 }
 
 .gradient.yellow {
+  position: fixed;
   top: -93px;
-  left: calc(50% - 432px);
-  width: 773px;
+  left: calc(30% - 432px);
+  width: 100%;
+  //   width: 773px;
   height: 704px;
   background: radial-gradient(
     50% 50% at 50% 50%,
     #ffe4b9 0,
     rgba(244, 206, 148, 0) 100%
   );
+}
+//Icons
+a .fab {
+  color: rgb(72, 70, 70);
+  padding: 15px 16px;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-right: 15px;
+  border: 1px solid rgb(72, 70, 70);
+  transition: all 0.4s;
+  &:hover {
+    color: rgb(46, 46, 46);
+    opacity: 0.9;
+    transform: rotate(360deg);
+  }
+}
+
+.gradient-wrapper {
+  position: absolute;
+  left: 50%;
+}
+.arrow-element {
+  width: 50px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.btn-read-more {
+    background-image: linear-gradient(to right, #fa8871af, #f4d7f5 );
+    box-shadow: rgba(100, 100, 111, 0.523) 0px 7px 29px 0px;
+    margin: 10px;
+    padding: 15px 45px;
+    transition: all 0.3s ease-in-out;
+    background-size: 200% auto;
+    color: rgb(74, 71, 71);
+    border-radius: 100px;
+    display: block;
+  
+    &:hover {
+      transform: translatey(10px);
+      box-shadow: none;
+      color: rgb(255, 255, 255);
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+.line-bottom{
+    border-bottom:1px solid rgb(254, 155, 93);
+    font-size: $fs-lg-25;
+}
+
+
+@media (max-width: 768px) {
+  .arrow-element {
+    width: 40px;
+  }
 }
