@@ -4,8 +4,7 @@
 *:after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -64,109 +63,8 @@ a {
 }
 
 .header .img-header {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   width: 100%;
-}
-
-.menu-button {
-  z-index: 2;
-  width: 40px;
-  border-radius: 50%;
-  -webkit-transition: -webkit-box-shadow 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: -webkit-box-shadow 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: box-shadow 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: box-shadow 1.2s cubic-bezier(0.19, 1, 0.22, 1), -webkit-box-shadow 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-  cursor: pointer;
-}
-
-.menu-button-icon {
-  position: absolute;
-  top: 10px;
-  width: 30px;
-  height: 1px;
-  display: block;
-  background: #040404;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.menu-button-icon:before, .menu-button-icon:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background: #000;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.menu-button-icon:before {
-  top: -10px;
-}
-
-.menu-button-icon:after {
-  bottom: -10px;
-}
-
-.menu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 2;
-  list-style: none;
-  font-size: 45px;
-  -webkit-transition: 0.25s 0.1s cubic-bezier(0, 1.07, 0, 1.02);
-  transition: 0.25s 0.1s cubic-bezier(0, 1.07, 0, 1.02);
-  opacity: 0;
-  visibility: hidden;
-}
-
-.menu a {
-  margin-bottom: 1em;
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-.menu a:hover {
-  opacity: 0.8;
-}
-
-#menu-button {
-  display: none;
-}
-
-#menu-button:checked ~ label .menu-button {
-  -webkit-box-shadow: 0 0 0 130vw #000, 0 0 0 130vh black;
-          box-shadow: 0 0 0 130vw #000, 0 0 0 130vh black;
-}
-
-#menu-button:checked ~ label .menu-button-icon {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-#menu-button:checked ~ label .menu-button-icon:after {
-  bottom: 0;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-#menu-button:checked ~ label .menu-button-icon:before {
-  top: 0;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-#menu-button:checked ~ .menu {
-  opacity: 1;
-  visibility: visible;
 }
 
 .gradient {
@@ -213,15 +111,13 @@ a .fab {
   font-size: 14px;
   margin-right: 15px;
   border: 1px solid #484646;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 a .fab:hover {
   color: #2e2e2e;
   opacity: 0.9;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .gradient-wrapper {
@@ -236,13 +132,10 @@ a .fab:hover {
 }
 
 .btn-read-more {
-  background-image: -webkit-gradient(linear, left top, right top, from(#fa8871af), to(#f4d7f5));
   background-image: linear-gradient(to right, #fa8871af, #f4d7f5);
-  -webkit-box-shadow: rgba(100, 100, 111, 0.523) 0px 7px 29px 0px;
-          box-shadow: rgba(100, 100, 111, 0.523) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.523) 0px 7px 29px 0px;
   margin: 10px;
   padding: 15px 45px;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-size: 200% auto;
   color: #4a4747;
@@ -251,10 +144,8 @@ a .fab:hover {
 }
 
 .btn-read-more:hover {
-  -webkit-transform: translatey(10px);
-          transform: translatey(10px);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  transform: translatey(10px);
+  box-shadow: none;
   color: white;
 }
 
@@ -267,9 +158,389 @@ a .fab:hover {
   font-size: 25px;
 }
 
+.hamburger {
+  position: absolute;
+  z-index: 10000;
+  top: -16px;
+  right: 36;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger .hamburger--container {
+  width: 100%;
+  position: relative;
+}
+
+.hamburger .hamburger--container .hamburger--bars {
+  height: 1px;
+  width: 1.5em;
+  background: #000;
+  position: absolute;
+  top: 0.9em;
+  transition: 0.3s ease;
+}
+
+.hamburger .hamburger--container .hamburger--bars:before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 2em;
+  background: inherit;
+  position: absolute;
+  left: 0;
+  transition: 0.3s ease;
+  top: -0.5em;
+}
+
+.hamburger .hamburger--container .hamburger--bars:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 2em;
+  background: inherit;
+  position: absolute;
+  left: 0;
+  transition: 0.3s ease;
+  top: 0.5em;
+}
+
+.hamburger.is-active .hamburger--container .hamburger--bars {
+  background: white;
+}
+
+.hamburger.is-active .hamburger--container .hamburger--bars:before {
+  background: white;
+  left: 0.25em;
+}
+
+.hamburger.is-active .hamburger--container .hamburger--bars:after {
+  background: white;
+  left: -0.25em;
+}
+
+.fsmenu {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+  display: none;
+}
+
+.fsmenu .fsmenu--container {
+  width: 0;
+  height: 100vh;
+  padding: 8em 3em 3em;
+  background: #000;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block {
+  width: 100%;
+  height: 100%;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container {
+  width: 100%;
+  height: 100%;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element {
+  width: 100%;
+  height: 15%;
+  list-style-type: none;
+  text-align: right;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element a:hover {
+  color: #e63946;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element a span {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  position: relative;
+  z-index: 1002;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element a span:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  z-index: 1003;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element .fsmenu--scrolling-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transform: translate(-20%, -100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element .fsmenu--scrolling-text span {
+  height: 1em;
+  font-size: 4em;
+  font-weight: 900;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #1e1e1e;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element:hover .fsmenu--scrolling-text {
+  font-weight: bold;
+  opacity: 1;
+  animation: animScrollingContactTextLeft 9s linear 0s infinite;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element .fsmenu--link-img {
+  width: 0px;
+  height: 50vh;
+  padding: -1em 3em 3em;
+  position: absolute;
+  top: 0;
+  right: calc(100vw - 720px);
+  z-index: 1001;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element .fsmenu--link-img .fsmenu--img-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element .fsmenu--link-img .fsmenu--img-container img {
+  width: 624px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element.open .fsmenu--link-img {
+  left: auto;
+  right: calc(100vw - 720px);
+  animation: animMenuRevealImg 0.4s ease 0s forwards;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element.open .fsmenu--link-img .fsmenu--img-container img {
+  right: 0;
+  left: auto;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element.is-closing .fsmenu--link-img {
+  left: 0;
+  right: auto;
+  animation: animMenuCloseImg 0.4s ease 0s forwards;
+}
+
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element.is-closing .fsmenu--link-img .fsmenu--img-container img {
+  left: 0;
+  right: auto;
+}
+
+.fsmenu.is-active {
+  display: block;
+}
+
+.fsmenu.is-active .fsmenu--container {
+  animation: animMenuReveal 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s forwards;
+}
+
+.fsmenu.is-active .fsmenu--container .fsmenu--text-container .fsmenu--list .fsmenu--list-element a span:before {
+  animation: animMenuRevealLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.4s forwards;
+}
+
+.fsmenu.close-menu {
+  display: block;
+}
+
+.fsmenu.close-menu .fsmenu--container {
+  width: 100vw;
+  right: auto;
+  left: 0;
+  animation: animMenuClose 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.3s forwards;
+}
+
+.fsmenu.close-menu .fsmenu--container .fsmenu--text-container .fsmenu--list .fsmenu--list-element a span:before {
+  left: auto;
+  right: 0;
+  background: black;
+  animation: animMenuCloseLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s forwards;
+}
+
+.card {
+  position: relative;
+  height: 500px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  background: transparent;
+  border: 0;
+}
+
+.card .box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  border: 0;
+  background: transparent;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.card .box img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.card .box .mxd p {
+  font-size: 13px;
+}
+
+.card:hover .box {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  background: #000;
+}
+
+.card:hover .box .mxd h5 {
+  color: #fff;
+}
+
+.card:hover .box .mxd p {
+  color: #fff;
+}
+
+#banner {
+  height: 75vh;
+  min-height: 25rem;
+  position: relative;
+}
+
+#banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+#banner video {
+  position: absolute;
+}
+
 @media (max-width: 768px) {
   .arrow-element {
     width: 40px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+@keyframes animMenuReveal {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+
+@keyframes animMenuRevealLinks {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes animMenuClose {
+  0% {
+    width: 100vw;
+    padding: 8em 3em 3em;
+  }
+  100% {
+    width: 0vw;
+    padding: 8em 0 0;
+  }
+}
+
+@keyframes animMenuCloseLinks {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 110%;
+  }
+}
+
+@keyframes animMenuRevealImg {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 720px;
+  }
+}
+
+@keyframes animMenuCloseImg {
+  0% {
+    width: 720px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes animScrollingContactTextLeft {
+  0% {
+    transform: translate(-20%, -100%);
+  }
+  100% {
+    transform: translate(-40%, -100%);
+  }
+}
