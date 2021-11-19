@@ -4,20 +4,19 @@
 *:after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
+  width: 100%;
+  height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Comfortaa";
   background-color: #ececed;
-}
-
-main h3 {
-  font-size: 65px;
 }
 
 .logo {
@@ -63,44 +62,9 @@ a {
 }
 
 .header .img-header {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
-}
-
-.gradient {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.gradient.purple {
-  position: fixed;
-  top: -150px;
-  left: calc(30% - 544px);
-  width: 100%;
-  height: 650px;
-  background: radial-gradient(50% 50% at 50% 50%, #cf9fdc 0, rgba(220, 193, 228, 0) 100%);
-}
-
-.gradient.orange {
-  position: fixed;
-  display: block;
-  top: -391px;
-  left: calc(30% - 858px);
-  width: 100%;
-  height: 870px;
-  background: radial-gradient(50% 50% at 50% 50%, #ffbd94 0, rgba(230, 155, 108, 0) 100%);
-}
-
-.gradient.yellow {
-  position: fixed;
-  top: -93px;
-  left: calc(30% - 432px);
-  width: 100%;
-  height: 704px;
-  background: radial-gradient(50% 50% at 50% 50%, #ffe4b9 0, rgba(244, 206, 148, 0) 100%);
 }
 
 a .fab {
@@ -111,18 +75,15 @@ a .fab {
   font-size: 14px;
   margin-right: 15px;
   border: 1px solid #484646;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 a .fab:hover {
   color: #2e2e2e;
   opacity: 0.9;
-  transform: rotate(360deg);
-}
-
-.gradient-wrapper {
-  position: absolute;
-  left: 50%;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .arrow-element {
@@ -132,10 +93,13 @@ a .fab:hover {
 }
 
 .btn-read-more {
+  background-image: -webkit-gradient(linear, left top, right top, from(#fa8871af), to(#f4d7f5));
   background-image: linear-gradient(to right, #fa8871af, #f4d7f5);
-  box-shadow: rgba(100, 100, 111, 0.523) 0px 7px 29px 0px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.523) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.523) 0px 7px 29px 0px;
   margin: 10px;
   padding: 15px 45px;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-size: 200% auto;
   color: #4a4747;
@@ -144,8 +108,10 @@ a .fab:hover {
 }
 
 .btn-read-more:hover {
-  transform: translatey(10px);
-  box-shadow: none;
+  -webkit-transform: translatey(10px);
+          transform: translatey(10px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: white;
 }
 
@@ -178,6 +144,7 @@ a .fab:hover {
   background: #000;
   position: absolute;
   top: 0.9em;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
@@ -189,6 +156,7 @@ a .fab:hover {
   background: inherit;
   position: absolute;
   left: 0;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   top: -0.5em;
 }
@@ -201,6 +169,7 @@ a .fab:hover {
   background: inherit;
   position: absolute;
   left: 0;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   top: 0.5em;
 }
@@ -253,8 +222,13 @@ a .fab:hover {
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element {
@@ -268,9 +242,16 @@ a .fab:hover {
   width: 100%;
   text-decoration: none;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
@@ -301,9 +282,14 @@ a .fab:hover {
 
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element .fsmenu--scrolling-text {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  transform: translate(-20%, -100%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(-20%, -100%);
+          transform: translate(-20%, -100%);
   opacity: 0;
   pointer-events: none;
 }
@@ -322,7 +308,8 @@ a .fab:hover {
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element:hover .fsmenu--scrolling-text {
   font-weight: bold;
   opacity: 1;
-  animation: animScrollingContactTextLeft 9s linear 0s infinite;
+  -webkit-animation: animScrollingContactTextLeft 9s linear 0s infinite;
+          animation: animScrollingContactTextLeft 9s linear 0s infinite;
 }
 
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element .fsmenu--link-img {
@@ -350,13 +337,15 @@ a .fab:hover {
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element.open .fsmenu--link-img {
   left: auto;
   right: calc(100vw - 720px);
-  animation: animMenuRevealImg 0.4s ease 0s forwards;
+  -webkit-animation: animMenuRevealImg 0.4s ease 0s forwards;
+          animation: animMenuRevealImg 0.4s ease 0s forwards;
 }
 
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element.open .fsmenu--link-img .fsmenu--img-container img {
@@ -367,7 +356,8 @@ a .fab:hover {
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element.is-closing .fsmenu--link-img {
   left: 0;
   right: auto;
-  animation: animMenuCloseImg 0.4s ease 0s forwards;
+  -webkit-animation: animMenuCloseImg 0.4s ease 0s forwards;
+          animation: animMenuCloseImg 0.4s ease 0s forwards;
 }
 
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element.is-closing .fsmenu--link-img .fsmenu--img-container img {
@@ -380,11 +370,13 @@ a .fab:hover {
 }
 
 .fsmenu.is-active .fsmenu--container {
-  animation: animMenuReveal 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s forwards;
+  -webkit-animation: animMenuReveal 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s forwards;
+          animation: animMenuReveal 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s forwards;
 }
 
 .fsmenu.is-active .fsmenu--container .fsmenu--text-container .fsmenu--list .fsmenu--list-element a span:before {
-  animation: animMenuRevealLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.4s forwards;
+  -webkit-animation: animMenuRevealLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.4s forwards;
+          animation: animMenuRevealLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.4s forwards;
 }
 
 .fsmenu.close-menu {
@@ -395,20 +387,23 @@ a .fab:hover {
   width: 100vw;
   right: auto;
   left: 0;
-  animation: animMenuClose 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.3s forwards;
+  -webkit-animation: animMenuClose 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.3s forwards;
+          animation: animMenuClose 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.3s forwards;
 }
 
 .fsmenu.close-menu .fsmenu--container .fsmenu--text-container .fsmenu--list .fsmenu--list-element a span:before {
   left: auto;
   right: 0;
   background: black;
-  animation: animMenuCloseLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s forwards;
+  -webkit-animation: animMenuCloseLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s forwards;
+          animation: animMenuCloseLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s forwards;
 }
 
 .card {
   position: relative;
   height: 500px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 15px;
   background: transparent;
   border: 0;
@@ -422,11 +417,19 @@ a .fab:hover {
   left: 20px;
   border: 0;
   background: transparent;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -435,48 +438,62 @@ a .fab:hover {
   margin-bottom: 10px;
 }
 
-.card .box .mxd p {
+.card .box .content-center p {
   font-size: 13px;
 }
 
 .card:hover .box {
-  transform: translateY(-50px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   background: #000;
 }
 
-.card:hover .box .mxd h5 {
+.card:hover .box .content-center h5 {
   color: #fff;
 }
 
-.card:hover .box .mxd p {
+.card:hover .box .content-center p {
   color: #fff;
 }
 
-#banner {
-  height: 75vh;
-  min-height: 25rem;
-  position: relative;
+.parallax {
+  /* The image used */
+  background-image: url("/style/img/james-harrison-vpOeXr5wmR4-unsplash.jpg");
+  /* Set a specific height */
+  min-height: 500px;
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#banner .overlay {
+.parallax .overlay {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
-}
-
-#banner video {
-  position: absolute;
+  background-color: rgba(0, 0, 0, 0.495);
 }
 
 @media (max-width: 768px) {
   .arrow-element {
     width: 40px;
+  }
+}
+
+@-webkit-keyframes animMenuReveal {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 100vw;
   }
 }
 
@@ -489,12 +506,32 @@ a .fab:hover {
   }
 }
 
+@-webkit-keyframes animMenuRevealLinks {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
 @keyframes animMenuRevealLinks {
   0% {
     width: 100%;
   }
   100% {
     width: 0%;
+  }
+}
+
+@-webkit-keyframes animMenuClose {
+  0% {
+    width: 100vw;
+    padding: 8em 3em 3em;
+  }
+  100% {
+    width: 0vw;
+    padding: 8em 0 0;
   }
 }
 
@@ -509,12 +546,30 @@ a .fab:hover {
   }
 }
 
+@-webkit-keyframes animMenuCloseLinks {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 110%;
+  }
+}
+
 @keyframes animMenuCloseLinks {
   0% {
     width: 0%;
   }
   100% {
     width: 110%;
+  }
+}
+
+@-webkit-keyframes animMenuRevealImg {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 720px;
   }
 }
 
@@ -527,6 +582,15 @@ a .fab:hover {
   }
 }
 
+@-webkit-keyframes animMenuCloseImg {
+  0% {
+    width: 720px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
 @keyframes animMenuCloseImg {
   0% {
     width: 720px;
@@ -536,11 +600,25 @@ a .fab:hover {
   }
 }
 
-@keyframes animScrollingContactTextLeft {
+@-webkit-keyframes animScrollingContactTextLeft {
   0% {
-    transform: translate(-20%, -100%);
+    -webkit-transform: translate(-20%, -100%);
+            transform: translate(-20%, -100%);
   }
   100% {
-    transform: translate(-40%, -100%);
+    -webkit-transform: translate(-40%, -100%);
+            transform: translate(-40%, -100%);
   }
 }
+
+@keyframes animScrollingContactTextLeft {
+  0% {
+    -webkit-transform: translate(-20%, -100%);
+            transform: translate(-20%, -100%);
+  }
+  100% {
+    -webkit-transform: translate(-40%, -100%);
+            transform: translate(-40%, -100%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
