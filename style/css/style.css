@@ -27,12 +27,28 @@ body {
   color: #eb7363;
 }
 
+.color-black {
+  color: #000000;
+}
+
 .bg-orange {
   background-color: #eb7363;
 }
 
 .fs-lg-12 {
   font-size: 12px;
+}
+
+.fs-lg-25 {
+  font-size: 25px;
+}
+
+.fs-lg-50 {
+  font-size: 65px;
+}
+
+.fs-lg-40 {
+  font-size: 40px;
 }
 
 .logo {
@@ -86,14 +102,19 @@ a:hover {
   display: block;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
+.header-links:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #eb7363;
+  transform: scaleX(0);
+  transition: all 500ms ease;
 }
-.header h3 {
-  font-size: 65px;
+
+.header-links:hover:after {
+  transform: scaleX(1);
 }
-.header .overlay-black {
+
+.overlay-black {
   position: absolute;
   top: 0;
   left: 0;
@@ -103,52 +124,28 @@ a:hover {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.454);
 }
+
+.header h3 {
+  font-size: 65px;
+}
 .header .img-header {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
 }
 
-.gradient {
-  position: absolute;
-  z-index: -1;
+.bg-header-banner {
+  background: url("/style/img/header-banner.jpg");
+  position: relative;
+  top: 40px;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 300px;
 }
 
-.gradient.purple {
-  top: -234px;
-  left: calc(50% - 516px);
-  width: 526px;
-  height: 526px;
-  background: radial-gradient(50% 50% at 50% 50%, #dcc1e4 0, rgba(220, 193, 228, 0) 100%);
-}
-
-.gradient.orange {
-  top: -605px;
-  left: calc(50% - 523px);
-  width: 1450px;
-  position: fixed;
-  display: block;
-  height: 988px;
-  background: radial-gradient(50% 50% at 50% 50%, #de8159 0, rgba(230, 155, 108, 0) 100%);
-}
-
-.gradient.yellow {
-  top: -130px;
-  left: calc(50% - 432px);
-  width: 588px;
-  height: 588px;
-  background: radial-gradient(50% 50% at 50% 50%, #f4ce94 0, rgba(244, 206, 148, 0) 100%);
-}
-
-.gradient-wrapper {
-  position: absolute;
-  left: 50%;
-}
-
-a .fab {
+.circular-fabs .fab {
   color: #484646;
   padding: 15px 16px;
   text-decoration: none;
@@ -158,7 +155,7 @@ a .fab {
   border: 1px solid #484646;
   transition: all 0.4s;
 }
-a .fab:hover {
+.circular-fabs .fab:hover {
   color: #2e2e2e;
   opacity: 0.9;
   transform: rotate(360deg);
@@ -194,7 +191,6 @@ a .fab:hover {
 
 .line-bottom {
   border-bottom: 1px solid #eb7363;
-  font-size: 25px;
 }
 
 .hamburger {
@@ -258,7 +254,7 @@ a .fab:hover {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1000px;
   overflow: hidden;
   display: none;
 }
@@ -328,7 +324,6 @@ a .fab:hover {
   align-items: center;
   transform: translate(-20%, -100%);
   opacity: 0;
-  pointer-card-portfolios: none;
 }
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element .fsmenu--scrolling-text span {
   height: 1em;
@@ -355,7 +350,6 @@ a .fab:hover {
   right: calc(100vw - 720px);
   z-index: 1001;
   font-size: 16px;
-  pointer-card-portfolios: none;
 }
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element .fsmenu--link-img .fsmenu--img-container {
   height: 100%;
@@ -521,7 +515,7 @@ a .fab:hover {
 }
 
 .card-portfolio:hover .content {
-  background-color: rgba(0, 0, 0, 0.201);
+  background-color: rgba(0, 0, 0, 0.612);
   height: 80%;
 }
 
@@ -553,55 +547,46 @@ a .fab:hover {
   border: 0;
   border-bottom: 2px solid black;
   -webkit-text-fill-color: black;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 .signup-form input:-webkit-autofill:hover {
   border: 0;
   border-bottom: 2px solid black;
   -webkit-text-fill-color: black;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 .signup-form input:-webkit-autofill:focus {
   border: 0;
   border-bottom: 2px solid black;
   -webkit-text-fill-color: black;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 .signup-form textarea:-webkit-autofill {
   border: 0;
   border-bottom: 2px solid black;
   -webkit-text-fill-color: black;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 .signup-form textarea:-webkit-autofill:hover {
   border: 0;
   border-bottom: 2px solid black;
   -webkit-text-fill-color: black;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 .signup-form textarea:-webkit-autofill:focus {
   border: 0;
   border-bottom: 2px solid black;
   -webkit-text-fill-color: black;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 .signup-form select:-webkit-autofill {
   border: 0;
   border-bottom: 2px solid black;
   -webkit-text-fill-color: black;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 .signup-form select:-webkit-autofill:hover {
   border: 0;
   border-bottom: 2px solid black;
   -webkit-text-fill-color: black;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 .signup-form select:-webkit-autofill:focus {
   border: 0;
   border-bottom: 2px solid black;
   -webkit-text-fill-color: black;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 .signup-form .signup-input {
   border: 0;
@@ -615,7 +600,7 @@ a .fab:hover {
   border-bottom: 1px solid #000;
 }
 .signup-form input[type=submit] {
-  font-size: 0.6em;
+  font-size: 1em;
   display: block;
   margin: 0 auto;
   width: -webkit-max-content;
@@ -633,7 +618,6 @@ a .fab:hover {
 }
 .signup-form input[type=submit]:hover {
   background: #eb7363;
-  padding: 1.25em 4em;
   cursor: pointer;
 }
 
@@ -696,7 +680,94 @@ a .fab:hover {
   left: 0;
   box-shadow: 0;
   width: 100%;
-  z-index: 999999;
+  z-index: 1000px;
+}
+
+.grid-item {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.square-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+.square-container .content {
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  perspective: inherit;
+  z-index: 2;
+}
+
+.front,
+.back {
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  text-align: center;
+  height: auto;
+  color: #fff;
+}
+
+.back {
+  background: #000000;
+}
+
+.front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  background-image: linear-gradient(to right, #f29898, #de7b41);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.grid-item:hover .front,
+.grid-item:hover .back {
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.grid-item .back {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+.grid-item .front {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+.grid-item:hover .back {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+.grid-item:hover .front {
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
 }
 
 @media (max-width: 360px) {
