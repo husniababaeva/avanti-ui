@@ -3,18 +3,21 @@
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --thm-black: #222429;
 }
 
 $comfortaa-font: "Comfortaa";
 
 $fs-lg-25: 25px;
 $fs-lg-50: 65px;
+$fs-lg-20: 20px;
 $fs-lg-13: 13px;
 $fs-lg-12: 12px;
 $fs-lg-40: 40px;
 
-$color-orange: #eb7363;
+// $color-orange: #eb7363;
 $color-black: #000000;
+$color-orange: #fe7c36;
 
 $bg-black: #000000;
 $bg-white: #ecece9;
@@ -67,7 +70,9 @@ body {
 .fs-lg-40 {
   font-size: $fs-lg-40;
 }
-
+.fs-lg-20 {
+  font-size: $fs-lg-20;
+}
 .logo {
   font-size: $fs-lg-25;
   font-weight: bold;
@@ -123,14 +128,76 @@ a:hover {
     }
   }
 }
-.header-links:after {
+.header {
+  h3 {
+    font-size: $fs-lg-50;
+  }
+
+  .img-header {
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+#services {
+  position: relative;
+  background: url("/style/img/wallpaper2you_40010.jpg") center top repeat;
+  // padding: 120px 0px 90px;
+  color: #ffffff;
+}
+.card-services {
+  background-color: rgba(58, 55, 53, 0.564);
+  width: 100%;
+  border-radius: 7px;
+  // border: 1px solid white;
+  padding: 50px 45px;
+  svg{
+    position: absolute;
+    top: -18px;
+    right: 5px;
+    display: block;
+    color: $color-orange;
+  
+  }
+  
+}
+.footer {
+  z-index: 1;
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  bottom: 0;
+}
+
+svg#curve {
+  position: absolute;
+  fill: orange;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  height: 450px;
+}
+
+
+.info {
+  text-align:center;
+  padding-left: 30px;
+  transform: translateY(250px);
+  transition: transform 2s cubic-bezier(.31,1.21,.64,1.02);
+}
+
+.card:hover .info {
+  transform: translateY(0px);
+}
+
+.link-bottom-line:after {
   display: block;
   content: "";
   border-bottom: solid 2px #eb7363;
   transform: scaleX(0);
   transition: all 500ms ease;
 }
-.header-links:hover:after {
+.link-bottom-line:hover:after {
   transform: scaleX(1);
 }
 .overlay-black {
@@ -144,16 +211,6 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.454);
 }
 
-.header {
-  h3 {
-    font-size: $fs-lg-50;
-  }
-
-  .img-header {
-    object-fit: contain;
-    width: 100%;
-  }
-}
 .bg-header-banner {
   background: url("/style/img/header-banner.jpg");
   position: relative;
@@ -919,6 +976,23 @@ a:hover {
   transform: rotateY(-180deg);
   transform-style: preserve-3d;
 }
+//filter-portfolio
+
+.courses a {
+  display: block;
+  height: 60px;
+  margin: 15px 0;
+  padding-top: 12.5px;
+  background: whitesmoke;
+  color: black;
+  border: 1px solid white;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.courses .mix-target {
+  display: none;
+}
 
 //
 @media (max-width: 360px) {
@@ -945,7 +1019,11 @@ a:hover {
     padding-right: 0%;
   }
 }
-
+@media (max-width: 992px) {
+  .text-sm-center {
+    text-align: center;
+  }
+}
 @keyframes animMenuReveal {
   0% {
     width: 0vw;

@@ -49,8 +49,46 @@ var swiper = new Swiper(".autoslide", {
     disableOnInteraction: false,
   },
   pagination: {
-    
     el: ".swiper-pagination",
     dynamicBullets: true,
   },
 });
+
+//filter-portfolio
+$('#mix-wrapper').mixItUp({
+  load: {
+  	sort: 'order:asc'
+  },
+	animation: {
+    effects: 'fade rotateZ(-180deg)',
+    duration: 700
+  },
+  selectors: {
+    target: '.mix-target',
+    filter: '.filter-btn',
+    sort: '.sort-btn'
+  },
+  callbacks: {
+    onMixEnd: function(state){
+      console.log(state)
+    }
+  }
+});
+// $(function () {
+//   var filterList = {
+//     init: function () {
+//       $("#portfoliolist").mixItUp({
+//         selectors: {
+//           target: ".portfolio",
+//           filter: ".filter",
+//         },
+//         load: {
+//           filter: ".app",
+//         },
+//       });
+//     },
+//   };
+
+//   // Run the show!
+//   filterList.init();
+// });

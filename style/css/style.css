@@ -2,6 +2,7 @@
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --thm-black: #222429;
 }
 
 *,
@@ -24,7 +25,7 @@ body {
 }
 
 .color-orange {
-  color: #eb7363;
+  color: #fe7c36;
 }
 
 .color-black {
@@ -32,7 +33,7 @@ body {
 }
 
 .bg-orange {
-  background-color: #eb7363;
+  background-color: #fe7c36;
 }
 
 .fs-lg-12 {
@@ -49,6 +50,10 @@ body {
 
 .fs-lg-40 {
   font-size: 40px;
+}
+
+.fs-lg-20 {
+  font-size: 20px;
 }
 
 .logo {
@@ -102,7 +107,64 @@ a:hover {
   display: block;
 }
 
-.header-links:after {
+.header h3 {
+  font-size: 65px;
+}
+.header .img-header {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
+#services {
+  position: relative;
+  background: url("/style/img/wallpaper2you_40010.jpg") center top repeat;
+  color: #ffffff;
+}
+
+.card-services {
+  background-color: rgba(58, 55, 53, 0.564);
+  width: 100%;
+  border-radius: 7px;
+  padding: 50px 45px;
+}
+.card-services svg {
+  position: absolute;
+  top: -18px;
+  right: 5px;
+  display: block;
+  color: #fe7c36;
+}
+
+.footer {
+  z-index: 1;
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  bottom: 0;
+}
+
+svg#curve {
+  position: absolute;
+  fill: orange;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  height: 450px;
+}
+
+.info {
+  text-align: center;
+  padding-left: 30px;
+  transform: translateY(250px);
+  transition: transform 2s cubic-bezier(0.31, 1.21, 0.64, 1.02);
+}
+
+.card:hover .info {
+  transform: translateY(0px);
+}
+
+.link-bottom-line:after {
   display: block;
   content: "";
   border-bottom: solid 2px #eb7363;
@@ -110,7 +172,7 @@ a:hover {
   transition: all 500ms ease;
 }
 
-.header-links:hover:after {
+.link-bottom-line:hover:after {
   transform: scaleX(1);
 }
 
@@ -123,15 +185,6 @@ a:hover {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.454);
-}
-
-.header h3 {
-  font-size: 65px;
-}
-.header .img-header {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
 }
 
 .bg-header-banner {
@@ -770,6 +823,21 @@ a:hover {
   transform-style: preserve-3d;
 }
 
+.courses a {
+  display: block;
+  height: 60px;
+  margin: 15px 0;
+  padding-top: 12.5px;
+  background: whitesmoke;
+  color: black;
+  border: 1px solid white;
+  transition: all 0.4s ease;
+}
+
+.courses .mix-target {
+  display: none;
+}
+
 @media (max-width: 360px) {
   .fs-sm-32 {
     font-size: 2rem !important;
@@ -792,6 +860,11 @@ a:hover {
   .pxx-sm-0 {
     padding-left: 0%;
     padding-right: 0%;
+  }
+}
+@media (max-width: 992px) {
+  .text-sm-center {
+    text-align: center;
   }
 }
 @-webkit-keyframes animMenuReveal {
