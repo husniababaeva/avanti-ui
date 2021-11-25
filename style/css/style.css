@@ -125,6 +125,7 @@ a:hover {
 .card-services {
   background-color: rgba(58, 55, 53, 0.564);
   width: 100%;
+  height: 200px;
   border-radius: 7px;
   padding: 50px 45px;
 }
