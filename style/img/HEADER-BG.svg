@@ -2,10 +2,10 @@
 <g clip-path="url(#clip0_7_5)">
 <rect width="1440" height="1024" fill="url(#paint0_linear_7_5)"/>
 <g style="mix-blend-mode:darken" filter="url(#filter0_f_7_5)">
-<ellipse cx="1577" cy="1088.5" rx="382" ry="322.5" fill="#20222e"/>
+<ellipse cx="1577" cy="1088.5" rx="382" ry="322.5" fill="#33374F"/>
 </g>
 <g style="mix-blend-mode:darken" filter="url(#filter1_f_7_5)">
-<ellipse cx="100" cy="942.5" rx="382" ry="322.5" fill="#d26e5b"/>
+<ellipse cx="100" cy="942.5" rx="400" ry="322.5" fill="#E36B53"/>
 </g>
 <g filter="url(#filter2_b_7_5)">
 <rect y="1024" width="1024" height="1440" rx="16" transform="rotate(-90 0 1024)" fill="url(#paint1_linear_7_5)" fill-opacity="0.5"/>
@@ -29,8 +29,8 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_7_5" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear_7_5" x1="-169.5" y1="562.5" x2="1440" y2="30.5001" gradientUnits="userSpaceOnUse">
-<stop stop-color="#e6b999"/>
-<stop offset="1" stop-color="#b2a3ac"/>
+<stop stop-color="#F1A772"/>
+<stop offset="1" stop-color="#C7A9BC"/>
 </linearGradient>
 <linearGradient id="paint1_linear_7_5" x1="0" y1="1024" x2="1030.05" y2="2459.66" gradientUnits="userSpaceOnUse">
 <stop stop-color="white" stop-opacity="0.4"/>

@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
 
 :root {
   --d: 700ms;
@@ -7,6 +9,8 @@
 }
 
 $comfortaa-font: "Comfortaa";
+$monserrat-font:"Montserrat";
+
 
 $fs-lg-25: 25px;
 $fs-lg-50: 65px;
@@ -150,23 +154,20 @@ header {
 }
 .header-main {
   position: relative;
-  .position-main-center {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    // padding-top: 500px !impornt;
-  }
-  h5 {
+  top: 30%;
+  span {
+    color: rgb(255, 250, 240);
+    font-size: 6rem;
     position: translateX(-50%) relative;
-    font-weight: bold;
+    font-weight: 900;
     font-family: "Poppins", sans-serif;
     &::after {
       content: " ";
+      font-size: 4rem;
       position: relative;
       color: #fff;
-      animation: textrotate 5s linear infinite;
-      -webkit-animation: textrotate 5s linear infinite;
+      animation: textrotate 8s linear infinite;
+      -webkit-animation: textrotate 8s linear infinite;
     }
   }
   p {
@@ -189,12 +190,27 @@ header {
   }
 }
 
-#services {
+#services-home-page {
   position: relative;
   background: url("/style/img/wallpaper2you_40010.jpg") center top repeat;
   // padding: 120px 0px 90px;
   color: #ffffff;
 }
+#about-page{
+  h2{
+    font-size: $fs-lg-50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+  }
+}
+h2{
+  font-family: $monserrat-font;
+  font-weight: 900;
+}
+
 .card-services {
   background-color: rgba(58, 55, 53, 0.564);
   width: 100%;
