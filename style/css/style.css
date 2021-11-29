@@ -40,6 +40,15 @@ body {
   background-color: #fe7c36;
 }
 
+.bg-header {
+  position: relative;
+  background: url("/style/img/HEADER-BG.svg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  margin: 0;
+}
+
 .fs-lg-12 {
   font-size: 12px;
 }
@@ -79,6 +88,12 @@ a:hover {
   height: 100%;
 }
 
+header p,
+header h3,
+header a {
+  color: white;
+}
+
 #header {
   position: fixed;
   top: 0px;
@@ -93,7 +108,7 @@ a:hover {
   position: relative;
 }
 #header ul li a {
-  color: #000000;
+  font-weight: bold;
   text-decoration: none;
 }
 #header ul li ul {
@@ -111,15 +126,52 @@ a:hover {
   display: block;
 }
 
-.header h3 {
-  font-size: 65px;
+.header-main h3 {
+  position: relative;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 4em;
 }
-.header .img-header {
+.header-main h3::after {
+  content: " ";
+  font-size: 3em;
+  position: relative;
+  color: #fff;
+  animation: textrotate 5s linear infinite;
+  -webkit-animation: textrotate 5s linear infinite;
+}
+.header-main p {
+  font-size: 25px;
+}
+.header-main .img-header {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
 }
 
+@-webkit-keyframes textrotate {
+  0% {
+    content: "Web saytlar";
+  }
+  50% {
+    content: "Web tetbiqler";
+  }
+  100% {
+    content: "Dizayn";
+  }
+}
+
+@keyframes textrotate {
+  0% {
+    content: "Web saytlar";
+  }
+  50% {
+    content: "Web tetbiqler";
+  }
+  100% {
+    content: "Dizayn";
+  }
+}
 #services {
   position: relative;
   background: url("/style/img/wallpaper2you_40010.jpg") center top repeat;
@@ -243,7 +295,7 @@ a:hover {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.454);
+  background-color: rgba(0, 0, 0, 0.575);
 }
 
 .bg-header-banner {
@@ -258,19 +310,20 @@ a:hover {
 }
 
 .circular-fabs .fab {
-  color: #484646;
+  color: white;
   padding: 15px 16px;
   text-decoration: none;
   border-radius: 50%;
   font-size: 14px;
   margin-right: 15px;
-  border: 1px solid #484646;
+  border: 1px solid white;
   transition: all 0.4s;
 }
 .circular-fabs .fab:hover {
   color: #2e2e2e;
   opacity: 0.9;
   transform: rotate(360deg);
+  border: 1px solid #2e2e2e;
 }
 
 .arrow-element {

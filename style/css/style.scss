@@ -63,6 +63,14 @@ body {
 .bg-orange {
   background-color: $color-orange;
 }
+.bg-header {
+  position: relative;
+  background: url("/style/img/HEADER-BG.svg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  margin: 0;
+}
 .fs-lg-12 {
   font-size: $fs-lg-12;
 }
@@ -96,6 +104,13 @@ a:hover {
   width: 100%;
   height: 100%;
 }
+header {
+  p,
+  h3,
+  a {
+    color: white;
+  }
+}
 #header {
   position: fixed;
   top: 0px;
@@ -109,7 +124,7 @@ a:hover {
 
     li {
       a {
-        color: $color-black;
+        font-weight: bold;
         text-decoration: none;
       }
 
@@ -133,14 +148,38 @@ a:hover {
     }
   }
 }
-.header {
+.header-main {
   h3 {
-    font-size: $fs-lg-50;
+    position: relative;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 4em;
+    &::after {
+      content: " ";
+      font-size: 3em;
+      position: relative;
+      color: #fff;
+      animation: textrotate 5s linear infinite;
+      -webkit-animation: textrotate 5s linear infinite;
+    }
   }
-
+  p {
+    font-size: $fs-lg-25;
+  }
   .img-header {
     object-fit: contain;
     width: 100%;
+  }
+}
+@keyframes textrotate {
+  0% {
+    content: "Web saytlar";
+  }
+  50% {
+    content: "Web tetbiqler";
+  }
+  100% {
+    content: "Dizayn";
   }
 }
 
@@ -257,7 +296,7 @@ a:hover {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.454);
+  background-color: rgba(0, 0, 0, 0.575);
 }
 
 .bg-header-banner {
@@ -325,19 +364,20 @@ a:hover {
 
 //Icons
 .circular-fabs .fab {
-  color: rgb(72, 70, 70);
+  color: rgb(255, 255, 255);
   padding: 15px 16px;
   text-decoration: none;
   border-radius: 50%;
   font-size: 14px;
   margin-right: 15px;
-  border: 1px solid rgb(72, 70, 70);
+  border: 1px solid rgb(255, 255, 255);
   transition: all 0.4s;
 
   &:hover {
     color: rgb(46, 46, 46);
     opacity: 0.9;
     transform: rotate(360deg);
+    border: 1px solid rgb(46, 46, 46);
   }
 }
 
@@ -1121,3 +1161,4 @@ a:hover {
     transform: translate(-40%, -100%);
   }
 }
+
