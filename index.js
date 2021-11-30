@@ -55,24 +55,24 @@ var swiper = new Swiper(".autoslide", {
 });
 
 //filter-portfolio
-$('#mix-wrapper').mixItUp({
+$("#mix-wrapper").mixItUp({
   load: {
-  	sort: 'order:asc'
+    sort: "order:asc",
   },
-	animation: {
-    effects: 'fade rotateZ(-180deg)',
-    duration: 700
+  animation: {
+    effects: "fade rotateZ(-180deg)",
+    duration: 700,
   },
   selectors: {
-    target: '.mix-target',
-    filter: '.filter-btn',
-    sort: '.sort-btn'
+    target: ".mix-target",
+    filter: ".filter-btn",
+    sort: ".sort-btn",
   },
   callbacks: {
-    onMixEnd: function(state){
-      console.log(state)
-    }
-  }
+    onMixEnd: function (state) {
+      console.log(state);
+    },
+  },
 });
 // $(function () {
 //   var filterList = {
@@ -92,3 +92,4 @@ $('#mix-wrapper').mixItUp({
 //   // Run the show!
 //   filterList.init();
 // });
+

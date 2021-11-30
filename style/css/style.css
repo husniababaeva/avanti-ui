@@ -24,6 +24,29 @@ body {
   font-family: "Comfortaa";
   background-color: #f1f1f4;
 }
+body:after, body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100vmax;
+  height: 100vmax;
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-animation: background 90s linear infinite;
+          animation: background 90s linear infinite;
+}
+body:after {
+  left: 15vw;
+}
+body:before {
+  right: 15vw;
+  -webkit-animation-delay: -30s;
+          animation-delay: -30s;
+  animation-direction: reverse;
+}
 
 .color-orange {
   color: #fe7c36;
@@ -41,11 +64,10 @@ body {
   background-color: #fe7c36;
 }
 
-.bg-header {
+.bg-banner-img {
   position: relative;
   background: url("/style/img/HEADER-BG.svg") no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
   background-position: center;
   margin: 0;
 }
@@ -89,12 +111,40 @@ a:hover {
   height: 100%;
 }
 
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  -webkit-animation: animate 7.5s ease-in-out infinite;
+          animation: animate 7.5s ease-in-out infinite;
+  display: flex;
+  overflow: hidden;
+  background-position: center center;
+}
 header p,
 header h3,
 header a {
   color: white;
 }
 
+@-webkit-keyframes background {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes background {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 #header {
   position: fixed;
   top: 0px;
@@ -133,16 +183,16 @@ header a {
 }
 .header-main span {
   color: floralwhite;
-  font-size: 6rem;
+  font-size: 70px;
   position: translateX(-50%) relative;
   font-weight: 900;
   font-family: "Poppins", sans-serif;
 }
 .header-main span::after {
   content: " ";
-  font-size: 4rem;
+  font-size: 4.7rem;
   position: relative;
-  color: #fff;
+  color: black;
   animation: textrotate 8s linear infinite;
   -webkit-animation: textrotate 8s linear infinite;
 }
@@ -199,10 +249,11 @@ h2 {
 }
 
 .card-services {
-  background-color: rgba(58, 55, 53, 0.564);
+  background-color: rgba(0, 0, 0, 0.564);
   width: 100%;
   height: 200px;
   border-radius: 7px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 50px 45px;
 }
 .card-services svg {
@@ -318,32 +369,50 @@ h2 {
   background-color: rgba(0, 0, 0, 0.575);
 }
 
-.bg-header-banner {
-  background: url("/style/img/header-banner.jpg");
-  position: relative;
-  top: 40px;
-  background-size: cover;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 300px;
-}
-
-.circular-fabs .fab {
-  color: white;
-  padding: 15px 16px;
-  text-decoration: none;
-  border-radius: 50%;
-  font-size: 14px;
+.circular-header-fabs {
+  height: 3rem;
+  width: 3rem;
+  color: #f0ebeb;
+  border-radius: 100px;
+  vertical-align: middle;
+  font-size: 0.9375rem;
   margin-right: 15px;
-  border: 1px solid white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f0eeee;
   transition: all 0.4s;
 }
-.circular-fabs .fab:hover {
-  color: #2e2e2e;
+
+.circular-header-fabs:hover {
+  color: #f0eded;
   opacity: 0.9;
+  text-decoration: none;
   transform: rotate(360deg);
-  border: 1px solid #2e2e2e;
+  border: 1px solid #f0f0f0;
+}
+
+.circular-footer-fabs {
+  height: 3rem;
+  width: 3rem;
+  color: black;
+  border-radius: 100px;
+  vertical-align: middle;
+  font-size: 0.9375rem;
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #040404;
+  transition: all 0.4s;
+}
+
+.circular-footer-fabs:hover {
+  color: #010101;
+  opacity: 0.9;
+  text-decoration: none;
+  transform: rotate(360deg);
+  border: 1px solid #040404;
 }
 
 .arrow-element {
@@ -371,18 +440,18 @@ h2 {
   position: relative;
 }
 .hamburger .hamburger--container .hamburger--bars {
-  height: 1px;
-  width: 1.5em;
-  background: #000;
+  height: 2px;
+  width: 2em;
+  background: white;
   position: absolute;
-  top: 0.9em;
+  top: 1em;
   transition: 0.3s ease;
 }
 .hamburger .hamburger--container .hamburger--bars:before {
   content: "";
   display: block;
-  height: 1px;
-  width: 2em;
+  height: 2px;
+  width: 3em;
   background: inherit;
   position: absolute;
   left: 0;
@@ -392,8 +461,8 @@ h2 {
 .hamburger .hamburger--container .hamburger--bars:after {
   content: "";
   display: block;
-  height: 1px;
-  width: 2em;
+  height: 2px;
+  width: 3em;
   background: inherit;
   position: absolute;
   left: 0;
@@ -427,7 +496,7 @@ h2 {
   width: 0;
   height: 100vh;
   padding: 8em 3em 3em;
-  background: #000;
+  background: black;
   position: absolute;
   right: 0;
   overflow: hidden;
@@ -478,7 +547,7 @@ h2 {
   display: block;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: white;
   position: absolute;
   left: 0;
   z-index: 1003;
@@ -937,9 +1006,7 @@ h2 {
 
 .courses a {
   display: block;
-  height: 60px;
-  margin: 15px 0;
-  padding-top: 12.5px;
+  width: 100%;
   background: whitesmoke;
   color: black;
   border: 1px solid white;
@@ -948,6 +1015,28 @@ h2 {
 
 .courses .mix-target {
   display: none;
+}
+
+.carousel-nav-icon {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.carousel-item img {
+  filter: grayscale(1);
+}
+.carousel-item img:hover {
+  filter: grayscale(0);
+}
+.carousel-item .col,
+.carousel-item .col-sm,
+.carousel-item .col-md {
+  margin: 8px;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
 }
 
 @media (max-width: 360px) {
@@ -968,6 +1057,39 @@ h2 {
   .pxx-sm-0 {
     padding-left: 0%;
     padding-right: 0%;
+  }
+}
+@media (min-width: 620px) {
+  .fs-md-40 {
+    font-size: 3rem !important;
+  }
+
+  .header-main {
+    position: relative;
+    top: 20%;
+  }
+  .header-main span {
+    color: floralwhite;
+    font-size: 70px;
+    position: translateX(-50%) relative;
+    font-weight: 900;
+    font-family: "Poppins", sans-serif;
+  }
+  .header-main span::after {
+    content: " ";
+    font-size: 3.5rem;
+    position: relative;
+    color: black;
+    animation: textrotate 8s linear infinite;
+    -webkit-animation: textrotate 8s linear infinite;
+  }
+  .header-main p {
+    font-size: 15px;
+  }
+  .header-main .img-header {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 100%;
   }
 }
 @media (max-width: 992px) {

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap");
 
 :root {
   --d: 700ms;
@@ -9,8 +8,7 @@
 }
 
 $comfortaa-font: "Comfortaa";
-$monserrat-font:"Montserrat";
-
+$monserrat-font: "Montserrat";
 
 $fs-lg-25: 25px;
 $fs-lg-50: 65px;
@@ -53,6 +51,30 @@ html {
 body {
   font-family: $comfortaa-font;
   background-color: #f1f1f4;
+  &:after,
+  &:before {
+      content: '';
+      display: block;
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      width: 100vw;  // IE/Edge
+      height: 100vh; // fallback
+      width: 100vmax;
+      height: 100vmax;
+      background: rgba(0,0,0,0.05);
+      animation: background 90s linear infinite;
+  }
+
+  &:after {
+      left: 15vw;
+  }
+
+  &:before {
+      right: 15vw;
+      animation-delay: -30s;
+      animation-direction: reverse;
+  }
 }
 
 .color-orange {
@@ -67,11 +89,12 @@ body {
 .bg-orange {
   background-color: $color-orange;
 }
-.bg-header {
+
+.bg-banner-img {
   position: relative;
   background: url("/style/img/HEADER-BG.svg") no-repeat center center fixed;
+  // background: url("/style/img/HEADER-BG.svg") no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
   background-position: center;
   margin: 0;
 }
@@ -109,12 +132,70 @@ a:hover {
   height: 100%;
 }
 header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  animation: animate 7.5s ease-in-out infinite;
+  display: flex;
+  overflow: hidden;
+  // background-size: cover;
+  background-position: center center;
   p,
   h3,
   a {
     color: white;
   }
 }
+
+
+@keyframes background {
+  0% {
+      transform: rotate(0deg);
+  }
+  
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+// .bg-header-img {
+//   position: relative;
+//   background: linear-gradient(
+//     -45deg,
+//     #3f51b1 0%,
+//     #5a55ae 13%,
+//     #7b5fac 25%,
+//     #8f6aae 38%,
+//     #a86aa4 50%,
+//     #cc6b8e 62%,
+//     #f18271 75%,
+//     #f3a469 87%,
+//     #f7c978 100%
+//   );
+//   // background: url("/style/img/bg-header.jpg") no-repeat center center fixed;
+
+//   // background-size: cover;
+//   height: 100vh;
+//   background-position: center;
+//   margin: 0;
+//   width: 100%;
+//   animation: gradient 15s ease infinite!important;
+//   -webkit-animation: gradient 15s ease infinite!important;
+// }
+// @keyframes gradient{
+//   0% {
+//     background-position: 0% 50%;
+//   }
+//   50% {
+//     background-position: 100% 50%;
+//   }
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }
+
 #header {
   position: fixed;
   top: 0px;
@@ -157,15 +238,15 @@ header {
   top: 30%;
   span {
     color: rgb(255, 250, 240);
-    font-size: 6rem;
+    font-size: 70px;
     position: translateX(-50%) relative;
     font-weight: 900;
     font-family: "Poppins", sans-serif;
     &::after {
       content: " ";
-      font-size: 4rem;
+      font-size: 4.7rem;
       position: relative;
-      color: #fff;
+      color: rgb(0, 0, 0);
       animation: textrotate 8s linear infinite;
       -webkit-animation: textrotate 8s linear infinite;
     }
@@ -196,8 +277,8 @@ header {
   // padding: 120px 0px 90px;
   color: #ffffff;
 }
-#about-page{
-  h2{
+#about-page {
+  h2 {
     font-size: $fs-lg-50;
     display: flex;
     align-items: center;
@@ -206,16 +287,19 @@ header {
     font-weight: 900;
   }
 }
-h2{
+h2 {
   font-family: $monserrat-font;
   font-weight: 900;
 }
 
 .card-services {
-  background-color: rgba(58, 55, 53, 0.564);
+  background-color: rgba(0, 0, 0, 0.564);
   width: 100%;
   height: 200px;
   border-radius: 7px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   // border: 1px solid white;
   padding: 50px 45px;
   svg {
@@ -320,87 +404,50 @@ h2{
   width: 100%;
   background-color: rgba(0, 0, 0, 0.575);
 }
-
-.bg-header-banner {
-  background: url("/style/img/header-banner.jpg");
-  position: relative;
-  top: 40px;
-  background-size: cover;
-  object-fit: cover;
-  width: 100%;
-  height: 300px;
-}
-// .gradient {
-//   position: absolute;
-//   z-index: -1;
-//   width: 100%;
-//   height: 100%;
-//   overflow: hidden;
-// }
-
-// .gradient.purple {
-//   position: fixed;
-//   top: -150px;
-//   left: calc(30% - 544px);
-//   width: 100%;
-//   height: 650px;
-//   background: radial-gradient(
-//     50% 50% at 50% 50%,
-//     #cf9fdc 0,
-//     rgba(220, 193, 228, 0) 100%
-//   );
-// }
-
-// .gradient.orange {
-//   position: fixed;
-//   display: block;
-//   top: -391px;
-//   left: calc(30% - 858px);
-//   width: 100%;
-//   height: 870px;
-//   background: radial-gradient(
-//     50% 50% at 50% 50%,
-//     #ffbd94 0,
-//     rgba(230, 155, 108, 0) 100%
-//   );
-// }
-
-// .gradient.yellow {
-//   position: fixed;
-//   top: -93px;
-//   left: calc(30% - 432px);
-//   width: 100%;
-//   //   width: 773px;
-//   height: 704px;
-//   background: radial-gradient(
-//     50% 50% at 50% 50%,
-//     #ffe4b9 0,
-//     rgba(244, 206, 148, 0) 100%
-//   );
-// }
-
-// .gradient-wrapper {
-//   position: absolute;
-//   left: 50%;
-// }
-
-//Icons
-.circular-fabs .fab {
-  color: rgb(255, 255, 255);
-  padding: 15px 16px;
-  text-decoration: none;
-  border-radius: 50%;
-  font-size: 14px;
+.circular-header-fabs {
+  height: 3rem;
+  width: 3rem;
+  color: rgb(240, 235, 235);
+  // padding: 20px;
+  border-radius: 100px;
+  vertical-align: middle;
+  font-size: 0.9375rem;
   margin-right: 15px;
-  border: 1px solid rgb(255, 255, 255);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(240, 238, 238);
   transition: all 0.4s;
+}
+.circular-header-fabs:hover {
+  color: rgb(240, 237, 237);
+  opacity: 0.9;
+  text-decoration: none;
+  transform: rotate(360deg);
+  border: 1px solid rgb(240, 240, 240);
+}
 
-  &:hover {
-    color: rgb(46, 46, 46);
-    opacity: 0.9;
-    transform: rotate(360deg);
-    border: 1px solid rgb(46, 46, 46);
-  }
+.circular-footer-fabs {
+  height: 3rem;
+  width: 3rem;
+  color: rgb(0, 0, 0);
+  // padding: 20px;
+  border-radius: 100px;
+  vertical-align: middle;
+  font-size: 0.9375rem;
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(4, 4, 4);
+  transition: all 0.4s;
+}
+.circular-footer-fabs:hover {
+  color: rgb(1, 1, 1);
+  opacity: 0.9;
+  text-decoration: none;
+  transform: rotate(360deg);
+  border: 1px solid rgb(4, 4, 4);
 }
 
 .arrow-element {
@@ -428,18 +475,18 @@ h2{
     position: relative;
 
     .hamburger--bars {
-      height: 1px;
-      width: 1.5em;
-      background: #000;
+      height: 2px;
+      width: 2em;
+      background: rgb(255, 255, 255);
       position: absolute;
-      top: 0.9em;
+      top: 1em;
       transition: 0.3s ease;
 
       &:before {
         content: "";
         display: block;
-        height: 1px;
-        width: 2em;
+        height: 2px;
+        width: 3em;
         background: inherit;
         position: absolute;
         left: 0;
@@ -450,8 +497,8 @@ h2{
       &:after {
         content: "";
         display: block;
-        height: 1px;
-        width: 2em;
+        height: 2px;
+        width: 3em;
         background: inherit;
         position: absolute;
         left: 0;
@@ -494,7 +541,7 @@ h2{
     width: 0;
     height: 100vh;
     padding: 8em 3em 3em;
-    background: #000;
+    background: rgb(0, 0, 0);
     position: absolute;
     right: 0;
     overflow: hidden;
@@ -546,7 +593,7 @@ h2{
                   display: block;
                   width: 100%;
                   height: 100%;
-                  background: #fff;
+                  background: rgb(255, 255, 255);
                   position: absolute;
                   left: 0;
                   z-index: 1003;
@@ -1068,9 +1115,8 @@ h2{
 
 .courses a {
   display: block;
-  height: 60px;
-  margin: 15px 0;
-  padding-top: 12.5px;
+  // height: 60px;
+  width: 100%;
   background: whitesmoke;
   color: black;
   border: 1px solid white;
@@ -1080,6 +1126,32 @@ h2{
 
 .courses .mix-target {
   display: none;
+}
+//@at-root
+.carousel-nav-icon {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  font-size: 10px;
+
+  // padding: 20px;
+  // border: 1px solid #1a1a1a;
+}
+.carousel-item {
+  img {
+    filter: grayscale(1);
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+  .col,
+  .col-sm,
+  .col-md {
+    margin: 8px;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+  }
 }
 
 //
@@ -1107,11 +1179,43 @@ h2{
     padding-right: 0%;
   }
 }
+@media (min-width: 620px) {
+  .fs-md-40 {
+    font-size: 3rem !important;
+  }
+  .header-main {
+    position: relative;
+    top: 20%;
+    span {
+      color: rgb(255, 250, 240);
+      font-size: 70px;
+      position: translateX(-50%) relative;
+      font-weight: 900;
+      font-family: "Poppins", sans-serif;
+      &::after {
+        content: " ";
+        font-size: 3.5rem;
+        position: relative;
+        color: rgb(0, 0, 0);
+        animation: textrotate 8s linear infinite;
+        -webkit-animation: textrotate 8s linear infinite;
+      }
+    }
+    p {
+      font-size: 15px;
+    }
+    .img-header {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+}
 @media (max-width: 992px) {
   .text-sm-center {
     text-align: center;
   }
 }
+
 @keyframes animMenuReveal {
   0% {
     width: 0vw;
