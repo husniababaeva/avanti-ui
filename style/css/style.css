@@ -279,7 +279,6 @@ h2 {
   height: 100%;
   width: 100%;
   position: relative;
-  border: 10px solid #f1f1f4;
 }
 .col-left-img::after {
   content: "";
@@ -296,7 +295,6 @@ h2 {
   height: 100%;
   width: 100%;
   position: relative;
-  border: 10px solid #f1f1f4;
 }
 .col-right-img::after {
   content: "";
