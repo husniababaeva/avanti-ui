@@ -113,19 +113,54 @@ a:hover {
 
 header {
   position: relative;
-  width: 100%;
   height: 100vh;
-  background: #333;
+}
+
+.bg-parallax-img {
+  position: relative;
+  width: 100%;
+  background: black;
   -webkit-animation: animate 7.5s ease-in-out infinite;
           animation: animate 7.5s ease-in-out infinite;
   display: flex;
   overflow: hidden;
-  background-position: center center;
+  background-position: center;
 }
-header p,
-header h3,
-header a {
+.bg-parallax-img p,
+.bg-parallax-img h3,
+.bg-parallax-img a {
   color: white;
+}
+
+.section-parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+}
+
+.shadow-title {
+  position: fixed;
+  top: 0;
+  left: 20px;
+  width: 100%;
+  height: 300%;
+  text-align: left;
+  font-family: "Muli", sans-serif;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  font-size: 18vw;
+  line-height: 1;
+  color: rgba(240, 234, 234, 0.637);
+  background: linear-gradient(90deg, rgba(200, 200, 200, 0.05), rgba(200, 200, 200, 0.35));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  z-index: 1;
 }
 
 @-webkit-keyframes background {
@@ -192,7 +227,7 @@ header a {
   content: " ";
   font-size: 4.7rem;
   position: relative;
-  color: black;
+  color: white !important;
   animation: textrotate 8s linear infinite;
   -webkit-animation: textrotate 8s linear infinite;
 }
@@ -1020,6 +1055,7 @@ h2 {
   width: 15px;
   border-radius: 50%;
   font-size: 10px;
+  color: #fff;
 }
 
 .carousel-item img {
