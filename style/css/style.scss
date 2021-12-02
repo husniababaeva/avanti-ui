@@ -28,9 +28,9 @@ $bg-white: #ecece9;
 
 $mx-100: 100px;
 
-$z-100: 100px;
-$z-1000: 1000px;
-$z: 999999px;
+$z-100: 100;
+$z-1000: 1000;
+$z: 999999;
 $h-100per: 100vh;
 $ratio: 1 1;
 
@@ -175,7 +175,7 @@ header {
   writing-mode: vertical-lr;
   font-size: 25vw;
   line-height: 1;
-  color: rgba(240, 234, 234, 0.201);
+  color: rgba(240, 234, 234, 0.521);
   background: linear-gradient(
     90deg,
     rgba(152, 151, 151, 0.077),
@@ -476,7 +476,7 @@ h2 {
 }
 
 .line-bottom {
-  border-bottom: 1px solid #5853ac;
+  border-bottom: 1px solid #5650c2;
 }
 
 .hamburger {
@@ -1173,7 +1173,6 @@ h2 {
     background-position: center center;
   }
 }
-//footer
 
 //
 @media (max-width: 360px) {
@@ -1184,6 +1183,7 @@ h2 {
     font-size: 3rem !important;
   }
 }
+
 @media (max-width: 768px) {
   // .arrow-element {
   //   width: 40px;
@@ -1242,7 +1242,7 @@ h2 {
 }
 @media (max-width: 992px) {
   #footer{
-    p,li a,span{font-size: 13px;}
+    p,li a{font-size: 13px;}
   }
   .text-sm-center {
     text-align: center;
@@ -1251,6 +1251,7 @@ h2 {
     font-size: 16px;
   }
 }
+
 @keyframes animMenuReveal {
   0% {
     width: 0vw;
@@ -1260,6 +1261,7 @@ h2 {
     width: 100vw;
   }
 }
+
 @keyframes animMenuRevealLinks {
   0% {
     width: 100%;
@@ -1269,6 +1271,7 @@ h2 {
     width: 0%;
   }
 }
+
 @keyframes animMenuClose {
   0% {
     width: 100vw;
@@ -1280,6 +1283,7 @@ h2 {
     padding: 8em 0 0;
   }
 }
+
 @keyframes animMenuCloseLinks {
   0% {
     width: 0%;
@@ -1289,6 +1293,7 @@ h2 {
     width: 110%;
   }
 }
+
 @keyframes animMenuRevealImg {
   0% {
     width: 0;
@@ -1298,6 +1303,7 @@ h2 {
     width: 720px;
   }
 }
+
 @keyframes animMenuCloseImg {
   0% {
     width: 720px;
@@ -1307,6 +1313,7 @@ h2 {
     width: 0;
   }
 }
+
 @keyframes animScrollingContactTextLeft {
   0% {
     transform: translate(-20%, -100%);
@@ -1316,6 +1323,7 @@ h2 {
     transform: translate(-40%, -100%);
   }
 }
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 $color-green;

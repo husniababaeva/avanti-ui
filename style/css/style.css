@@ -49,7 +49,7 @@ body:before {
 }
 
 .z {
-  z-index: 999999px;
+  z-index: 999999;
 }
 
 .color-orange {
@@ -159,7 +159,7 @@ header {
       writing-mode: vertical-lr;
   font-size: 25vw;
   line-height: 1;
-  color: rgba(240, 234, 234, 0.201);
+  color: rgba(240, 234, 234, 0.521);
   background: linear-gradient(90deg, rgba(152, 151, 151, 0.077), rgba(200, 200, 200, 0.836));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -172,7 +172,7 @@ header {
   top: 0px;
   background-color: none !important;
   width: 100%;
-  z-index: 999999px;
+  z-index: 999999;
 }
 #header ul {
   list-style: none;
@@ -379,7 +379,7 @@ h2 {
 }
 
 .arrow-element {
-  z-index: 999999px;
+  z-index: 999999;
   position: fixed;
   width: 50px;
   vertical-align: middle;
@@ -387,12 +387,12 @@ h2 {
 }
 
 .line-bottom {
-  border-bottom: 1px solid #5853ac;
+  border-bottom: 1px solid #5650c2;
 }
 
 .hamburger {
   position: absolute;
-  z-index: 999999px;
+  z-index: 999999;
   top: -16px;
   right: 65px;
   background: transparent;
@@ -451,7 +451,7 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1000px;
+  z-index: 1000;
   overflow: hidden;
   display: none;
 }
@@ -878,7 +878,7 @@ h2 {
   left: 0;
   box-shadow: 0;
   width: 100%;
-  z-index: 1000px;
+  z-index: 1000;
 }
 
 .grid-item {
@@ -987,7 +987,7 @@ h2 {
   border-radius: 50%;
   font-size: 10px;
   color: white;
-  z-index: 999999px;
+  z-index: 999999;
 }
 
 .carousel-item .col,
@@ -1062,7 +1062,7 @@ h2 {
   }
 }
 @media (max-width: 992px) {
-  #footer p, #footer li a, #footer span {
+  #footer p, #footer li a {
     font-size: 13px;
   }
 
