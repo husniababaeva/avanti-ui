@@ -140,27 +140,27 @@ header {
   height: 100%;
   background-position: center;
   background-size: cover;
-  z-index: 2;
+  z-index: 0;
 }
 
 .shadow-title {
   position: fixed;
   top: 0;
-  left: 20px;
+  left: 0px;
   width: 100%;
   height: 300%;
   text-align: left;
   font-family: "Muli", sans-serif;
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
-  font-size: 18vw;
+  font-size: 25vw;
   line-height: 1;
-  color: rgba(240, 234, 234, 0.637);
-  background: linear-gradient(90deg, rgba(200, 200, 200, 0.05), rgba(200, 200, 200, 0.35));
+  color: rgba(240, 234, 234, 0.521);
+  background: linear-gradient(90deg, rgba(152, 151, 151, 0.077), rgba(200, 200, 200, 0.836));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
-  z-index: 1;
+  z-index: 0;
 }
 
 @-webkit-keyframes background {
@@ -215,13 +215,14 @@ header {
 .header-main {
   position: relative;
   top: 30%;
+  z-index: 100000;
 }
 .header-main span {
   color: floralwhite;
   font-size: 70px;
   position: translateX(-50%) relative;
   font-weight: 900;
-  font-family: "Poppins", sans-serif;
+  font-family: "Muli", sans-serif;
 }
 .header-main span::after {
   content: " ";
@@ -310,36 +311,11 @@ h2 {
   font-weight: 900;
 }
 
-.col-left-img {
+.col-img {
   height: 100%;
   width: 100%;
   position: relative;
-}
-.col-left-img::after {
-  content: "";
-  position: absolute;
-  left: -42px;
-  top: 54px;
-  height: 98%;
-  width: 98%;
-  border: 8px solid #13837d;
-  z-index: -1;
-}
-
-.col-right-img {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-.col-right-img::after {
-  content: "";
-  position: absolute;
-  right: -42px;
-  bottom: 54px;
-  height: 98%;
-  width: 98%;
-  border: 8px solid #13837d;
-  z-index: -1;
+  border: 12px solid #f1f1f4;
 }
 
 .fill:hover,
@@ -354,29 +330,19 @@ h2 {
   box-shadow: 0 0 0 2em rgba(19, 131, 125, 0);
 }
 
-@-webkit-keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 #13837d;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 #13837d;
-  }
-}
 .btn-read-more {
-  color: #13837d;
+  color: #4b2f9faa;
   transition: 0.25s;
   background: transparent;
   border: 2px solid;
   font: inherit;
   line-height: 1;
-  margin: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   padding: 1em 2em;
 }
 .btn-read-more:hover, .btn-read-more:focus {
-  border-color: #13837d;
+  border-color: #4b2f9faa;
 }
 
 .link-bottom-line:after {
@@ -464,7 +430,7 @@ h2 {
   position: absolute;
   z-index: 999999;
   top: -16px;
-  right: 36;
+  right: 65px;
   background: transparent;
   cursor: pointer;
 }
@@ -778,11 +744,11 @@ h2 {
 
 .card-portfolio .rollover p {
   margin: 0;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 .card-portfolio:hover .content {
-  background-color: rgba(0, 0, 0, 0.612);
+  background-color: rgba(0, 0, 0, 0.475);
   height: 80%;
 }
 
@@ -1055,15 +1021,10 @@ h2 {
   width: 15px;
   border-radius: 50%;
   font-size: 10px;
-  color: #fff;
+  color: white;
+  z-index: 999999;
 }
 
-.carousel-item img {
-  filter: grayscale(1);
-}
-.carousel-item img:hover {
-  filter: grayscale(0);
-}
 .carousel-item .col,
 .carousel-item .col-sm,
 .carousel-item .col-md {
@@ -1083,6 +1044,14 @@ h2 {
   }
 }
 @media (max-width: 768px) {
+  .order-first-sm {
+    order: 2;
+  }
+
+  .order-second-sm {
+    order: -1;
+  }
+
   .fs-sm-12 {
     font-size: 12px;
   }
@@ -1091,6 +1060,10 @@ h2 {
   .pxx-sm-0 {
     padding-left: 0%;
     padding-right: 0%;
+  }
+
+  .header-main p {
+    font-size: 16px;
   }
 }
 @media (min-width: 620px) {
@@ -1107,7 +1080,7 @@ h2 {
     font-size: 70px;
     position: translateX(-50%) relative;
     font-weight: 900;
-    font-family: "Poppins", sans-serif;
+    font-family: "Muli", sans-serif;
   }
   .header-main span::after {
     content: " ";
@@ -1116,9 +1089,6 @@ h2 {
     color: black;
     animation: textrotate 8s linear infinite;
     -webkit-animation: textrotate 8s linear infinite;
-  }
-  .header-main p {
-    font-size: 15px;
   }
   .header-main .img-header {
     -o-object-fit: contain;
@@ -1129,6 +1099,10 @@ h2 {
 @media (max-width: 992px) {
   .text-sm-center {
     text-align: center;
+  }
+
+  .fs-sm-16 {
+    font-size: 16px;
   }
 }
 @-webkit-keyframes animMenuReveal {
@@ -1245,5 +1219,15 @@ h2 {
   }
   100% {
     transform: translate(-40%, -100%);
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #13837d;
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #13837d;
   }
 }/*# sourceMappingURL=style.css.map */
