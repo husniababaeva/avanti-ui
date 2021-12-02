@@ -30,7 +30,7 @@ $mx-100: 100px;
 
 $z-100: 100px;
 $z-1000: 1000px;
-$z: 999999;
+$z: 999999px;
 $h-100per: 100vh;
 $ratio: 1 1;
 
@@ -76,6 +76,7 @@ body {
     animation-direction: reverse;
   }
 }
+.z{z-index: $z;}
 
 .color-orange {
   color: $color-orange;
@@ -89,7 +90,6 @@ body {
 .bg-orange {
   background-color: $color-orange;
 }
-
 .bg-banner-img {
   position: relative;
   background: url("/style/img/HEADER-BG.svg") no-repeat center center fixed;
@@ -134,7 +134,6 @@ a:hover {
 header {
   position: relative;
   height: 100vh;
-  
 }
 .bg-parallax-img {
   position: relative;
@@ -176,7 +175,7 @@ header {
   writing-mode: vertical-lr;
   font-size: 25vw;
   line-height: 1;
-  color: rgba(240, 234, 234, 0.521);
+  color: rgba(240, 234, 234, 0.201);
   background: linear-gradient(
     90deg,
     rgba(152, 151, 151, 0.077),
@@ -186,15 +185,6 @@ header {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
   z-index: 0;
-}
-@keyframes background {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 // .bg-header-img {
@@ -298,17 +288,6 @@ header {
     width: 100%;
   }
 }
-@keyframes textrotate {
-  0% {
-    content: "Web saytlar";
-  }
-  50% {
-    content: "Web tetbiqler";
-  }
-  100% {
-    content: "Dizayn";
-  }
-}
 
 #services-home-page {
   position: relative;
@@ -405,7 +384,6 @@ h2 {
   box-shadow: 0 0 0 2em rgba($color-green, 0);
 }
 
-
 .btn-read-more {
   color: #4b2f9faa;
   transition: 0.25s;
@@ -498,7 +476,7 @@ h2 {
 }
 
 .line-bottom {
-  border-bottom: 1px solid #eb7363;
+  border-bottom: 1px solid #5853ac;
 }
 
 .hamburger {
@@ -880,8 +858,7 @@ h2 {
 .card-portfolio .rollover p {
   margin: 0;
   // font-family: "Montserrat", Arial, Helvetica, sans-serif;
-	font-family: 'Muli', sans-serif;
-
+  font-family: "Muli", sans-serif;
 }
 
 .card-portfolio:hover .content {
@@ -965,9 +942,10 @@ h2 {
     }
   }
   .signup-input {
+    background-color: transparent;
     border: 0;
     border-bottom: 2px solid #000;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     font-size: 1em;
     &:focus {
       border: 0;
@@ -980,7 +958,7 @@ h2 {
     display: block;
     margin: 0 auto;
     width: max-content;
-    background: #333;
+    background: rgb(0, 0, 0);
     width: 100%;
     padding: 1.25em 2em;
     text-transform: uppercase;
@@ -990,7 +968,7 @@ h2 {
     outline: 0;
     transition: 0.3s all ease-in-out;
     &:hover {
-      background: #eb7363;
+      background: #3a3861;
       // padding: 1.25em 4em;
       cursor: pointer;
     }
@@ -1118,7 +1096,7 @@ h2 {
   height: 100%;
   content: "";
   display: block;
-  background-image: linear-gradient(to right, #f29898, #de7b41);
+  background-image: linear-gradient(to bottom, #38305c, #2d2b46);
   backface-visibility: hidden;
 }
 .grid-item:hover .front,
@@ -1195,6 +1173,7 @@ h2 {
     background-position: center center;
   }
 }
+//footer
 
 //
 @media (max-width: 360px) {
@@ -1205,15 +1184,14 @@ h2 {
     font-size: 3rem !important;
   }
 }
-
 @media (max-width: 768px) {
   // .arrow-element {
   //   width: 40px;
   // }
-  .order-first-sm{
+  .order-first-sm {
     order: 2;
   }
-  .order-second-sm{
+  .order-second-sm {
     order: -1;
   }
   .fs-sm-12 {
@@ -1225,8 +1203,10 @@ h2 {
     padding-left: 0%;
     padding-right: 0%;
   }
-  .header-main{
-    p{font-size: 16px;}
+  .header-main {
+    p {
+      font-size: 16px;
+    }
   }
 }
 @media (min-width: 620px) {
@@ -1253,7 +1233,7 @@ h2 {
         -webkit-animation: textrotate 8s linear infinite;
       }
     }
-  
+
     .img-header {
       object-fit: contain;
       width: 100%;
@@ -1261,12 +1241,16 @@ h2 {
   }
 }
 @media (max-width: 992px) {
+  #footer{
+    p,li a,span{font-size: 13px;}
+  }
   .text-sm-center {
     text-align: center;
   }
-  .fs-sm-16{font-size: 16px;}
+  .fs-sm-16 {
+    font-size: 16px;
+  }
 }
-
 @keyframes animMenuReveal {
   0% {
     width: 0vw;
@@ -1276,7 +1260,6 @@ h2 {
     width: 100vw;
   }
 }
-
 @keyframes animMenuRevealLinks {
   0% {
     width: 100%;
@@ -1286,7 +1269,6 @@ h2 {
     width: 0%;
   }
 }
-
 @keyframes animMenuClose {
   0% {
     width: 100vw;
@@ -1298,7 +1280,6 @@ h2 {
     padding: 8em 0 0;
   }
 }
-
 @keyframes animMenuCloseLinks {
   0% {
     width: 0%;
@@ -1308,7 +1289,6 @@ h2 {
     width: 110%;
   }
 }
-
 @keyframes animMenuRevealImg {
   0% {
     width: 0;
@@ -1318,7 +1298,6 @@ h2 {
     width: 720px;
   }
 }
-
 @keyframes animMenuCloseImg {
   0% {
     width: 720px;
@@ -1328,7 +1307,6 @@ h2 {
     width: 0;
   }
 }
-
 @keyframes animScrollingContactTextLeft {
   0% {
     transform: translate(-20%, -100%);
@@ -1338,9 +1316,28 @@ h2 {
     transform: translate(-40%, -100%);
   }
 }
-
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 $color-green;
+  }
+}
+@keyframes background {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes textrotate {
+  0% {
+    content: "Web saytlar";
+  }
+  50% {
+    content: "Web tetbiqler";
+  }
+  100% {
+    content: "Dizayn";
   }
 }

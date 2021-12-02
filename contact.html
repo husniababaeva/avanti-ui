@@ -222,9 +222,10 @@
                 </div>
             </div>
         </div>
+
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.5289630209963!2d49.812195116186174!3d40.37496767936992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307dea5b943d51%3A0x2636058d56be35a4!2sElml%C9%99r%20Akademiyas%C4%B1%20Metro%20Stansiya!5e0!3m2!1sen!2s!4v1637742937397!5m2!1sen!2s"
-            class="w-100" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            class="w-100 z" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-12 text-center">
@@ -251,7 +252,7 @@
                             </div>
                             <div class="col-12">
                                 <label for="text">Mətn</label>
-                                <input type="text" name="text" class="signup-input">
+                                <textarea type="text" row="1" name="text" class="signup-input w-100"></textarea>
                             </div>
                         </div>
                         <input type="submit" value="Göndər">
@@ -261,57 +262,83 @@
         </div>
     </main>
 
-    <footer id="footer" class="position-relative  mt-5">
+    <footer id="footer" class="position-relative mt-5 ">
         <div class="container-lg">
             <div class="row pt-5 pb-3 d-flex justify-content-between">
-                <div class="col-md-6 col-xs-8 col-lg-3 justify-content-start pt-4">
-                    <div class="pb-4">
+                <div class="col-md-5 col-xs-8 justify-content-start pt-4">
+                    <div class="pb-3">
                         <a href="#" class="text-decoration-none text-dark">
-                            <h5 class=" font-weight-bold">avanti</h5>
+                            <h5 class="font-weight-bold color-black ">avanti</h5>
                         </a>
                     </div>
-                    <p class=" font-weight-lighter fs-lg-12">Onlayn biznes ehtiyaclarını anlayaraq, çox sayda
-                        müştərilərlə ünsiyyət təcrübəsi, yüksək səviyyəli kadr və sifarişlərimizin çoxluğunu nəzərə
-                        alaraq fəaliyyətimizi daha da genişləndirərək AVANTI MMC CREATIVE AGENCY saytını sizin
-                        ixtiyarınıza verdik.</p>
-                    <div class="d-flex  justify-content-between ">
+                    <p class="font-weight-lighter ">
+                        Onlayn biznes ehtiyaclarını anlayaraq, çox sayda müştərilərlə
+                        ünsiyyət təcrübəsi, yüksək səviyyəli kadr və sifarişlərimizin
+                        çoxluğunu nəzərə alaraq fəaliyyətimizi daha da genişləndirərək
+                        AVANTI MMC CREATIVE AGENCY saytını sizin ixtiyarınıza verdik.
+                    </p>
+                    <div class="d-flex justify-content-between">
                         <div class="pt-3 px-0">
-                            <ul class="social-icons px-0 d-flex  justify-content-between">
-                                <li class="d-inline "><a href="" class="social-icon text-decoration-none circular-fabs">
-                                        <i class="fab fa-facebook-f"></i></a></li>
-                                <li class="d-inline "><a href="" class="social-icon text-decoration-none circular-fabs">
-                                        <i class="fab fa-twitter"></i></a></li>
-                                <li class="d-inline "><a href="" class="social-icon text-decoration-none circular-fabs">
-                                        <i class="fab fa-instagram "></i></a></li>
-
+                            <ul class="social-icons px-0 d-flex justify-content-between">
+                                <li class="d-inline">
+                                    <a href="" class="social-icon text-decoration-none circular-footer-fabs">
+                                        <i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="d-inline">
+                                    <a href="" class="social-icon text-decoration-none circular-footer-fabs">
+                                        <i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="d-inline">
+                                    <a href="" class="social-icon text-decoration-none circular-footer-fabs">
+                                        <i class="fab fa-instagram"></i></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-xs-8 pt-4">
-                    <span class="font-weight-bold d-inline-block pb-3">Kateqoriya</span>
+                <div class="col-md-2 col-xs-8 pt-4">
+                    <span class="font-weight-bold d-inline-block pb-3 color-black link-bottom-line">Kateqoriya</span>
                     <ul class="list-unstyled text-dark">
-                        <li class="mb-3"><a href="aboutus.html" class="text-decoration-none text-dark">Haqqımızda</a></li>
-                        <li class="mb-3"><a href="services.html" class="text-decoration-none text-dark">Xidmətlər</a></li>
-                        <li class="mb-3"><a href="portfolio.html" class="text-decoration-none text-dark">Portfolio</a></li>
-                        <li class="mb-3"><a href="contact.html" class="text-decoration-none text-dark">Əlaqə</a></li>
+                        <li class="mb-3">
+                            <a href="aboutus.html" class="text-decoration-none text-dark link-bottom-line">Haqqımızda</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="services.html" class="text-decoration-none text-dark link-bottom-line">Xidmətlər</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="portfolio.html" class="text-decoration-none text-dark link-bottom-line">Portfolio</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="contact.html" class="text-decoration-none text-dark link-bottom-line">Əlaqə</a>
+                        </li>
                     </ul>
-
                 </div>
-                <div class="col-md-3 col-xs-8 pt-4">
-                    <span class=" font-weight-bold d-inline-block pb-3">Ofisimizə buyurun</span>
-                    <div class="mb-3"><i class="fas fa-map-pin mr-4 "></i><span class="">Address</span></div>
-                    <div class="mb-3"><i class="fas fa-phone-alt mr-3 "></i><span class="">+994 (50) 235 02 05</span></div>
-                    <div class="mb-3"><i class="fas fa-paper-plane mr-3 "></i><span class="">avanti@gmail.com</span></div>
+                <div class="col-md-4 col-xs-8 pt-4">
+                    <span class="font-weight-bold d-inline-block pb-3 color-black ">Ofisimizə buyurun</span>
+                    <ul class="list-unstyled text-dark">
+                        <li class="mb-3">
+                            <i class="fas fa-map-pin mr-4"></i><span class="">Address</span>
+                        </li >
+                        <li class="mb-3">
+                            <i class="fas fa-phone-alt mr-3"></i><span class="">+994 (50) 235 02 05</span>
+                        </li>
+                        <li class="mb-3">
+                             <i class="fas fa-paper-plane mr-3"></i><span class="">avanti@gmail.com</span>
+                        </li>
+                    </ul>
+                   
                 </div>
-
             </div>
-            <hr>
+            <hr />
             <div class="row justify-content-center py-3">
                 <div class="container center">
-                    <p>Made with <i class="material-icons red-text text-lighten-3 tiny">favorite</i> By <a
-                            href="https://www.thinkmilkdesign.co.uk" class="green-text text-lighten-2"
-                            target="_blank">AVANTI MMC</a></p>
+                    <p>
+                        Made with
+                        <i class="material-icons red-text text-lighten-3 tiny">favorite</i>
+                        By
+                        <a href="https://www.thinkmilkdesign.co.uk" class="green-text text-lighten-2"
+                            target="_blank">AVANTI MMC</a>
+                    </p>
                 </div>
                 <!-- <div class="col-4">
                     <span class=" roboto font-weight-lighter fs-lg-14">© 2021 AVANTI MMC CREATIVE AGENCY</span>
@@ -323,16 +350,15 @@
     <div class="bottom-call-mobile d-md-none d-xs-block">
         <div class="btn-call-group">
             <div class="row d-flex align-items-center">
-                <div class=" col-6 bg-dark text-center text-white font-weight-bold py-4">
+                <div class="col-6 bg-dark text-center text-white font-weight-bold py-4">
                     <a href="https://wa.me/+994502350205" class="text-white">
                         <i class="fab fa-whatsapp text-success"></i>
                         <span class="">Whatsapp</span>
                     </a>
-
                 </div>
                 <div class="col-6 bg-orange text-center text-white font-weight-bold py-4">
                     <a href="tel:+994502350205 " class="text-white">
-                        <i class="fas fa-phone-alt "></i>
+                        <i class="fas fa-phone-alt"></i>
                         <span class="">Zəng et</span>
                     </a>
                 </div>

@@ -48,6 +48,10 @@ body:before {
   animation-direction: reverse;
 }
 
+.z {
+  z-index: 999999px;
+}
+
 .color-orange {
   color: #fe7c36;
 }
@@ -155,7 +159,7 @@ header {
       writing-mode: vertical-lr;
   font-size: 25vw;
   line-height: 1;
-  color: rgba(240, 234, 234, 0.521);
+  color: rgba(240, 234, 234, 0.201);
   background: linear-gradient(90deg, rgba(152, 151, 151, 0.077), rgba(200, 200, 200, 0.836));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -163,29 +167,12 @@ header {
   z-index: 0;
 }
 
-@-webkit-keyframes background {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes background {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 #header {
   position: fixed;
   top: 0px;
   background-color: none !important;
   width: 100%;
-  z-index: 999999;
+  z-index: 999999px;
 }
 #header ul {
   list-style: none;
@@ -241,29 +228,6 @@ header {
   width: 100%;
 }
 
-@-webkit-keyframes textrotate {
-  0% {
-    content: "Web saytlar";
-  }
-  50% {
-    content: "Web tetbiqler";
-  }
-  100% {
-    content: "Dizayn";
-  }
-}
-
-@keyframes textrotate {
-  0% {
-    content: "Web saytlar";
-  }
-  50% {
-    content: "Web tetbiqler";
-  }
-  100% {
-    content: "Dizayn";
-  }
-}
 #services-home-page {
   position: relative;
   background: url("/style/img/wallpaper2you_40010.jpg") center top repeat;
@@ -415,7 +379,7 @@ h2 {
 }
 
 .arrow-element {
-  z-index: 999999;
+  z-index: 999999px;
   position: fixed;
   width: 50px;
   vertical-align: middle;
@@ -423,12 +387,12 @@ h2 {
 }
 
 .line-bottom {
-  border-bottom: 1px solid #eb7363;
+  border-bottom: 1px solid #5853ac;
 }
 
 .hamburger {
   position: absolute;
-  z-index: 999999;
+  z-index: 999999px;
   top: -16px;
   right: 65px;
   background: transparent;
@@ -822,9 +786,10 @@ h2 {
   -webkit-text-fill-color: black;
 }
 .signup-form .signup-input {
+  background-color: transparent;
   border: 0;
   border-bottom: 2px solid #000;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   font-size: 1em;
 }
 .signup-form .signup-input:focus {
@@ -839,7 +804,7 @@ h2 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background: #333;
+  background: black;
   width: 100%;
   padding: 1.25em 2em;
   text-transform: uppercase;
@@ -850,7 +815,7 @@ h2 {
   transition: 0.3s all ease-in-out;
 }
 .signup-form input[type=submit]:hover {
-  background: #eb7363;
+  background: #3a3861;
   cursor: pointer;
 }
 
@@ -966,7 +931,7 @@ h2 {
   height: 100%;
   content: "";
   display: block;
-  background-image: linear-gradient(to right, #f29898, #de7b41);
+  background-image: linear-gradient(to bottom, #38305c, #2d2b46);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -1022,7 +987,7 @@ h2 {
   border-radius: 50%;
   font-size: 10px;
   color: white;
-  z-index: 999999;
+  z-index: 999999px;
 }
 
 .carousel-item .col,
@@ -1097,6 +1062,10 @@ h2 {
   }
 }
 @media (max-width: 992px) {
+  #footer p, #footer li a, #footer span {
+    font-size: 13px;
+  }
+
   .text-sm-center {
     text-align: center;
   }
@@ -1229,5 +1198,43 @@ h2 {
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 #13837d;
+  }
+}
+@-webkit-keyframes background {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes background {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes textrotate {
+  0% {
+    content: "Web saytlar";
+  }
+  50% {
+    content: "Web tetbiqler";
+  }
+  100% {
+    content: "Dizayn";
+  }
+}
+@keyframes textrotate {
+  0% {
+    content: "Web saytlar";
+  }
+  50% {
+    content: "Web tetbiqler";
+  }
+  100% {
+    content: "Dizayn";
   }
 }/*# sourceMappingURL=style.css.map */
