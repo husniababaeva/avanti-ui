@@ -312,7 +312,7 @@ h2 {
 .link-bottom-line:after {
   display: block;
   content: "";
-  border-bottom: solid 2px #eb7363;
+  border-bottom: solid 2px #a7a7eb;
   transform: scaleX(0);
   transition: all 500ms ease;
 }
@@ -498,8 +498,8 @@ h2 {
 }
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container .fsmenu--list .fsmenu--list-element a span {
   color: white;
-  font-size: 2.5em;
-  font-weight: 800;
+  font-size: 3em;
+  font-weight: 900;
   text-transform: uppercase;
   line-height: 1;
   position: relative;
@@ -526,6 +526,7 @@ h2 {
   height: 1em;
   font-size: 4em;
   font-weight: 900;
+  font-family: "Muli", sans-serif;
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #1e1e1e;
@@ -1062,7 +1063,9 @@ h2 {
   }
 }
 @media (max-width: 992px) {
-  #footer p, #footer li a {
+  #footer p,
+#footer li a,
+#footer span {
     font-size: 13px;
   }
 
