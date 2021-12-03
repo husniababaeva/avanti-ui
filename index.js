@@ -10,6 +10,7 @@ $(document).ready(function () {
         $("#header").css({
           "background-color": "rgba(255, 255, 255, 0.30)",
           "backdrop-filter": "blur(4px)",
+          
         });
       } else {
         $("#header").css({ "background-color": "transparent" });

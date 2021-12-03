@@ -168,7 +168,7 @@ header {
   position: fixed;
   top: 0;
   // margin-top: 6px;
-  left: 0px;
+  left: -14px;
   width: 100%;
   height: 300%;
   text-align: left;
@@ -177,11 +177,11 @@ header {
   writing-mode: vertical-lr;
   font-size: 25vw;
   line-height: 1;
-  color: rgba(240, 234, 234, 0.521);
+  color: rgba(240, 234, 234, 0.29);
   background: linear-gradient(
     90deg,
-    rgba(152, 151, 151, 0.077),
-    rgba(200, 200, 200, 0.836)
+    rgba(104, 104, 104, 0.077),
+    rgba(130, 129, 129, 0.836)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -264,10 +264,10 @@ header {
 }
 .header-main {
   position: relative;
-  top: 30%;
+  top: 20%;
   z-index: 100000;
   span {
-    color: rgb(255, 250, 240);
+    color: rgb(255, 255, 255);
     font-size: 70px;
     position: translateX(-50%) relative;
     font-weight: 900;
@@ -387,7 +387,7 @@ h2 {
 }
 
 .btn-read-more {
-  color: #4b2f9faa;
+  color: #4da4a7;
   transition: 0.25s;
   background: transparent;
   border: 2px solid;
@@ -399,14 +399,14 @@ h2 {
   padding: 1em 2em;
   &:hover,
   &:focus {
-    border-color: #4b2f9faa;
+    border-color: #6cafb1;
   }
 }
 
 .link-bottom-line:after {
   display: block;
   content: "";
-  border-bottom: solid 2px rgb(167, 167, 235);
+  border-bottom: solid 2px #54c5c9;
   transform: scaleX(0);
   transition: all 500ms ease;
 }
@@ -478,7 +478,7 @@ h2 {
 }
 
 .line-bottom {
-  border-bottom: 1px solid #5650c2;
+  border-bottom: 1px solid #6cafb1;
 }
 
 .hamburger {
@@ -841,17 +841,18 @@ h2 {
   transition: all 0.5s ease;
   width: 100%;
 }
-.card-portfolio h3 {
+.card-portfolio h5 {
   //font: bold 1em/1.125em 'Montserrat', Arial, Helvetica, sans-serif;
-  letter-spacing: 2px;
-  height: 68px;
+  letter-spacing: 1px;
+  height: 60px;
   margin: 0;
-  padding-top: 20px;
+  padding-top: 10px ;
+  padding-left: 10px;
+  padding-right: 10px;
   text-transform: uppercase;
 }
 
 .card-portfolio .rollover {
-  font-size: 0.9375em;
   line-height: 1.4em;
   padding: 18px 20px;
   opacity: 0;
@@ -866,7 +867,6 @@ h2 {
 
 .card-portfolio:hover .content {
   background-color: rgba(0, 0, 0, 0.475);
-
   height: 80%;
 }
 
@@ -1047,7 +1047,7 @@ h2 {
   left: 0;
   box-shadow: 0;
   width: 100%;
-  z-index: $z-1000;
+  z-index: $z;
 }
 //contact-3cards
 .grid-item {
@@ -1207,42 +1207,23 @@ h2 {
     padding-right: 0%;
   }
   .header-main {
-    p {
-      font-size: 16px;
-    }
-  }
-}
-@media (min-width: 620px) {
-  .fs-md-40 {
-    font-size: 3rem !important;
-  }
-  .header-main {
-    position: relative;
-    top: 20%;
     span {
-      color: rgb(255, 250, 240);
-      font-size: 70px;
-      position: translateX(-50%) relative;
-      font-weight: 900;
-      // font-family: "Poppins", sans-serif;
-      font-family: "Muli", sans-serif;
-
-      &::after {
-        content: " ";
-        font-size: 3.5rem;
-        position: relative;
-        color: rgb(0, 0, 0);
-        animation: textrotate 8s linear infinite;
-        -webkit-animation: textrotate 8s linear infinite;
-      }
+      font-size: 3rem !important;
     }
-
-    .img-header {
-      object-fit: contain;
-      width: 100%;
+    p {
+      font-size: 1rem;
+    }
+    &::after {
+      content: " ";
+      font-size: 3rem !important;
+      position: relative;
+      color: rgb(0, 0, 0);
+      animation: textrotate 8s linear infinite;
+      -webkit-animation: textrotate 8s linear infinite;
     }
   }
 }
+
 @media (max-width: 992px) {
   #footer {
     p,
@@ -1256,6 +1237,9 @@ h2 {
   }
   .fs-sm-16 {
     font-size: 16px;
+  }
+  .shadow-title {
+    font-size: 40vw;
   }
 }
 
