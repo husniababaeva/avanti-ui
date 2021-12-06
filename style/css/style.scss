@@ -183,47 +183,12 @@ header {
     rgba(104, 104, 104, 0.077),
     rgba(130, 129, 129, 0.836)
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
   z-index: 0;
 }
-
-// .bg-header-img {
-//   position: relative;
-//   background: linear-gradient(
-//     -45deg,
-//     #3f51b1 0%,
-//     #5a55ae 13%,
-//     #7b5fac 25%,
-//     #8f6aae 38%,
-//     #a86aa4 50%,
-//     #cc6b8e 62%,
-//     #f18271 75%,
-//     #f3a469 87%,
-//     #f7c978 100%
-//   );
-//   // background: url("/style/img/bg-header.jpg") no-repeat center center fixed;
-
-//   // background-size: cover;
-//   height: 100vh;
-//   background-position: center;
-//   margin: 0;
-//   width: 100%;
-//   animation: gradient 15s ease infinite!important;
-//   -webkit-animation: gradient 15s ease infinite!important;
-// }
-// @keyframes gradient{
-//   0% {
-//     background-position: 0% 50%;
-//   }
-//   50% {
-//     background-position: 100% 50%;
-//   }
-//   100% {
-//     background-position: 0% 50%;
-//   }
-// }
 
 #header {
   position: fixed;
@@ -765,55 +730,6 @@ h2 {
   }
 }
 
-.card {
-  position: relative;
-  height: 400px;
-  background: rgba(255, 255, 255, 0.055);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  backdrop-filter: blur(1rem);
-  border-radius: 0 0 15px 0;
-  border-radius: 15px;
-  border: 0;
-
-  .box {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
-    border: 0;
-    background: transparent;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-
-    img {
-      width: 80px;
-      margin-bottom: 10px;
-    }
-
-    .content-center p {
-      font-size: $fs-lg-13;
-    }
-  }
-}
-
-.card:hover .box {
-  transform: translateY(-50px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  background: #000;
-}
-
-.card:hover .box .content-center h5 {
-  color: #fff;
-}
-
-.card:hover .box .content-center p {
-  color: #fff;
-}
 .parallax {
   background-image: url("/style/img/james-harrison-vpOeXr5wmR4-unsplash.jpg");
   min-height: 350px;
@@ -846,7 +762,7 @@ h2 {
   letter-spacing: 1px;
   height: 60px;
   margin: 0;
-  padding-top: 10px ;
+  padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
   text-transform: uppercase;
@@ -1338,5 +1254,133 @@ h2 {
   }
   100% {
     content: "Dizayn";
+  }
+}
+
+/* Cards */
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+
+  &.dark {
+    background-color: #ebeaea;
+  }
+
+  .postcard__img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .postcard__img_link {
+    display: contents;
+  }
+
+  .postcard__text {
+    padding-right: 1.5rem;
+    padding-left: 1.8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+
+    .postcard__img {
+      max-width: 340px;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .postcard__text {
+      padding: 3.8rem;
+      width: 100%;
+    }
+
+    .media.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: -20%;
+      height: 130%;
+      width: 35px;
+    }
+
+    &:hover .postcard__img {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2n + 1) {
+      flex-direction: row;
+    }
+
+    &:nth-child(2n + 0) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(2n + 1) .postcard__text::before {
+      left: -15px !important;
+      transform: rotate(5deg);
+    }
+
+    &:nth-child(2n + 0) .postcard__text::before {
+      right: -12px !important;
+      transform: rotate(-4deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .postcard__text {
+    padding: 2rem 3.5rem;
+  }
+
+  .postcard__text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -20%;
+    z-index: $z;
+    height: 130%;
+    width: 52px;
+  }
+
+  .postcard.dark {
+    .postcard__text:before {
+      background: #ebeaea;
+    }
+  }
+  .postcard.light {
+    .postcard__text:before {
+      background: #ebeaea;
+    }
   }
 }
