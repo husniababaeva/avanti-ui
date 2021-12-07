@@ -140,7 +140,7 @@ header {
 .bg-parallax-img {
   position: relative;
   width: 100%;
-  background: rgb(0, 0, 0);
+  background: #1d1f21;
   animation: animate 7.5s ease-in-out infinite;
   display: flex;
   overflow: hidden;
@@ -213,12 +213,14 @@ header {
         display: none;
         position: absolute;
         overflow: auto;
-        top: 30px;
+        left: -20px;
+        top: 35px;
         width: 150px;
-        background-color: #5e5e6894;
-        box-shadow: rgb(112 112 122 / 50%) 0px 7px 29px 0px;
+        background-color: #115160;
+        // background-color: #37373ad6;
+        // box-shadow: rgb(112 112 122 / 50%) 0px 7px 29px 0px;
         padding: 15px;
-        border-radius: 4px;
+        // border-radius: 4px;
       }
 
       &:hover ul {
@@ -311,34 +313,7 @@ h2 {
   position: relative;
 
   border: 12px solid #f1f1f4;
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   left: -28px;
-  //   top: 43px;
-  //   height: 98%;
-  //   width: 98%;
-  //   border: 10px solid #4b2f9faa;
-  //   z-index: -1;
-  // }
 }
-// .col-right-img {
-//   height: 100%;
-//   width: 100%;
-//   position: relative;
-//   // border: 10px solid #f1f1f4;
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     right: -28px;
-//     bottom: 43px;
-//     height: 98%;
-//     width: 98%;
-//     border: 10px solid #4b2f9faa;
-//     // border: 8px solid #13837d;
-//     z-index: -1;
-//   }
-// }
 
 .fill:hover,
 .fill:focus {
@@ -460,7 +435,7 @@ h2 {
 
     .hamburger--bars {
       height: 2px;
-      width: 2em;
+      width: 1.5em;
       background: rgb(255, 255, 255);
       position: absolute;
       top: 1em;
@@ -470,7 +445,7 @@ h2 {
         content: "";
         display: block;
         height: 2px;
-        width: 3em;
+        width: 2em;
         background: inherit;
         position: absolute;
         left: 0;
@@ -482,7 +457,7 @@ h2 {
         content: "";
         display: block;
         height: 2px;
-        width: 3em;
+        width: 2em;
         background: inherit;
         position: absolute;
         left: 0;
@@ -593,7 +568,7 @@ h2 {
               opacity: 0;
 
               span {
-                height: 1em;
+                // height: 1em;
                 font-size: 4em;
                 font-weight: 900;
                 font-family: "Muli", sans-serif;
@@ -634,7 +609,7 @@ h2 {
                   display: block;
                   position: absolute;
                   right: 0;
-                  top: 50%;
+                  top: 70%;
                   transform: translate(0, -50%);
                 }
               }
@@ -1071,7 +1046,7 @@ h2 {
   width: 15px;
   border-radius: 50%;
   font-size: 10px;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
   z-index: $z;
   // padding: 20px;
   // border: 1px solid #1a1a1a;
@@ -1096,7 +1071,7 @@ h2 {
 //
 @media (max-width: 360px) {
   .fs-sm-32 {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
   }
   .fs-sm-40 {
     font-size: 3rem !important;
@@ -1129,11 +1104,11 @@ h2 {
     p {
       font-size: 1rem;
     }
-    &::after {
+    span::after {
       content: " ";
       font-size: 3rem !important;
       position: relative;
-      color: rgb(0, 0, 0);
+      // color: rgb(0, 0, 0);
       animation: textrotate 8s linear infinite;
       -webkit-animation: textrotate 8s linear infinite;
     }
@@ -1368,7 +1343,6 @@ h2 {
     position: absolute;
     display: block;
     top: -20%;
-    z-index: $z;
     height: 130%;
     width: 52px;
   }
@@ -1384,3 +1358,51 @@ h2 {
     }
   }
 }
+
+/*******************Our Amazing Work Section*****************/
+
+// .btn-group { margin-bottom: 10px; }
+.btn.checked { background-color: #403d37; }
+
+/* Isotope Grid Styles */
+/* --------------------------------------- */
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* Isotope Item Styles */
+/* --------------------------------------- */
+.item {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  float: left;
+  text-align: center;
+}
+.item.round { border-radius: 75px; }
+
+.item.yellow { background: #DE910A; }
+.item.black { background: #1B1B1E; }
+.item.red { background: #AF2E1E; }
+
+.item.wide,
+.item.big { width: 150px; }
+.item.tall,
+.item.big { height: 150px; }
+
+.item .content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -15px;
+  left: 0;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+}
+
+.filters { margin-bottom: 20px; }

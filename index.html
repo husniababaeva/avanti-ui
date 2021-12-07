@@ -204,8 +204,11 @@
                 <div class="overlay-black"></div>
                 <div class="container">
                     <div class="row d-flex justify-content-between align-items-center py-5">
-                        <div class="col-3 text-sm-center text-left">
+                        <!-- <div class="col-lg-3 col-xs-12 text-sm-center text-left">
                             <span class="font-weight-bolder text-white line-bottom fs-lg-25">Xidmətlər</span>
+                        </div> -->
+                        <div class="col-lg-3 col-xs-12 mb-3 text-sm-center d-flex justify-content-start">
+                            <span class="font-weight-bolder line-bottom fs-lg-25 mt-3 text-white">Xidmətlər</span>
                         </div>
                     </div>
                     <div class="row pb-5">
@@ -322,38 +325,64 @@
                 </div>
             </div>
         </section>
+        <section class="container" style="padding: 30px;">
+            <div class="filters ">
+                <div class="row">
+                    <div class="btn-group" role="group" data-filter-group="color" aria-label="Kind">
+                        <button type="button" class="btn btn-sm btn-secondary btn-filter checked"
+                            data-filter="">All</button>
+                        <button type="button" class="btn btn-sm btn-secondary btn-filter"
+                            data-filter=".yellow">Yellow</button>
+                        <button type="button" class="btn btn-sm btn-secondary btn-filter"
+                            data-filter=".black">Black</button>
+                        <button type="button" class="btn btn-sm btn-secondary btn-filter"
+                            data-filter=".red">Red</button>
+                    </div>
+                </div>
 
-        <section id="portfolio">
+
+                <div class="grid">
+                    <div class="item small round yellow"><span class="content">1</span></div>
+                    <div class="item small round black"><span class="content">2</div>
+                    <div class="item small square yellow"><span class="content">4</span></div>
+                    <div class="item small square black"><span class="content">5</span></div>
+                    <div class="item small square red"><span class="content">6</span></div>
+                    <div class="item wide round yellow"><span class="content">7</span></div>
+                    <div class="item big square black"><span class="content">17</span></div>
+                    <div class="item big square red"><span class="content">18</span></div>
+                    <div class="item big square red"><span class="content">18</span></div>
+                    <div class="item wide round yellow"><span class="content">7</span></div>
+                </div>
+        </section>
+        <!-- <section id="portfolio">
             <div class="container">
                 <div class="row my-5">
                     <div class="col-12 my-3">
                         <div class="row d-flex justify-content-between align-items-center">
-                            <div class="col-lg-3 col-xs-12 mb-3 text-sm-center">
+                            <div class="col-lg-3 col-xs-7 mb-3 text-sm-center">
                                 <span class="font-weight-bolder line-bottom fs-lg-25 mt-3">Portfolio</span>
                             </div>
-                            <div class=" col-lg-8 col-xs-12 filters clearfix mb-3 text-sm-center">
+                            <div class=" col-lg-8 col-xs-7 filters clearfix mb-3 text-sm-center">
                                 <div class="row text-sm-center">
-                                    <div class="col-3 filter-btn d-flex justify-content-center mt-3" data-filter="all">
+                                    <div class="col-xs-3 col-md-2 filter-btn d-inline-block mt-3" data-filter="all">
                                         <a href="#"
                                             class="text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none">Hamısı</a>
                                     </div>
-                                    <div class="col-xs-3 col-md-3 filter-btn d-inline-block mt-3"
-                                        data-filter=".vebsəhifələr">
+                                    <div class="col-xs-7  col-md-3 filter-btn d-inline-block mt-3"
+                                        data-filter=".websəhifələr">
                                         <a href="#"
-                                            class=" text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none">Web
-                                            səhifələr</a>
+                                            class=" text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none">Web səhifələr</a>
                                     </div>
-                                    <div class="col-sm-6 col-md-3 filter-btn d-inline-block mt-3"
+                                    <div class="col-xs-12  col-md-3 filter-btn d-inline-block mt-3"
                                         data-filter=".webtetbiqler">
                                         <a href="#"
-                                            class=" text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none">Web
-                                            tetbiqler</a>
+                                            class=" text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none">Web tetbiqler</a>
                                     </div>
-                                    <div class="col-sm-6 col-md-2 filter-btn d-inline-block mt-3" data-filter=".logo">
+                                    <div class="col-xs-12  col-md-2 filter-btn d-inline-block mt-3" data-filter=".logo">
                                         <a href="#"
                                             class="text-dark font-weight-bold fs-lg-20 link-bottom-linetext-decoration-none">Logo</a>
                                     </div>
-                                    <div class="col-sm-6 col-md-2 filter-btn d-inline-block mt-3"
+                                    <div class="col-xs-12  col-md-2 filter-btn d-inline-block mt-3"
                                         data-filter=".eticaret">
                                         <a href="#"
                                             class=" text-dark font-weight-bold fs-lg-20 link-bottom-linetext-decoration-none">E-ticaret</a>
@@ -492,7 +521,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section id="comments " class="section">
             <div class="container my-5">
                 <div class="swiper autoslide text-center my-5">
