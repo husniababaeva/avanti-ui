@@ -123,7 +123,7 @@ header {
 .bg-parallax-img {
   position: relative;
   width: 100%;
-  background: #1d1f21;
+  background: #000000;
   -webkit-animation: animate 7.5s ease-in-out infinite;
           animation: animate 7.5s ease-in-out infinite;
   display: flex;
@@ -144,27 +144,6 @@ header {
   height: 100%;
   background-position: center;
   background-size: cover;
-  z-index: 0;
-}
-
-.shadow-title {
-  position: fixed;
-  top: 0;
-  left: -14px;
-  width: 100%;
-  height: 300%;
-  text-align: left;
-  font-family: "Muli", sans-serif;
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
-  font-size: 25vw;
-  line-height: 1;
-  color: rgba(240, 234, 234, 0.29);
-  background: linear-gradient(90deg, rgba(104, 104, 104, 0.077), rgba(130, 129, 129, 0.836));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
   z-index: 0;
 }
 
@@ -202,7 +181,6 @@ header {
 .header-main {
   position: relative;
   top: 20%;
-  z-index: 100000;
 }
 .header-main span {
   color: white;
@@ -451,7 +429,6 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1000;
   overflow: hidden;
   display: none;
 }
@@ -831,7 +808,25 @@ h2 {
   left: 0;
   box-shadow: 0;
   width: 100%;
-  z-index: 999999;
+  z-index: 100;
+}
+
+.bottom_tawk_to {
+  position: fixed;
+  bottom: 65px;
+  right: 30px;
+  padding: 0;
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 5%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  z-index: 100;
+  border-radius: 50%;
+  background-image: linear-gradient(#fe7c36, #150e0b);
+  border: 0;
 }
 
 .grid-item {
@@ -940,7 +935,7 @@ h2 {
   border-radius: 50%;
   font-size: 10px;
   color: white !important;
-  z-index: 999999;
+  z-index: 1000;
 }
 
 .carousel-item .col,
@@ -952,7 +947,7 @@ h2 {
   background-position: center center;
 }
 
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
   .fs-sm-32 {
     font-size: 1.5rem !important;
   }
@@ -961,7 +956,7 @@ h2 {
     font-size: 3rem !important;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .order-first-sm {
     order: 2;
   }
@@ -974,7 +969,83 @@ h2 {
     font-size: 12px;
   }
 }
-@media (max-width: 620px) {
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+  }
+  .postcard .postcard__img {
+    max-width: 340px;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+  }
+  .postcard .postcard__text {
+    padding: 3.8rem;
+    width: 100%;
+  }
+  .postcard .media.postcard__text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -20%;
+    height: 130%;
+    width: 35px;
+  }
+  .postcard:hover .postcard__img {
+    transform: scale(1.1);
+  }
+  .postcard:nth-child(2n+1) {
+    flex-direction: row;
+  }
+  .postcard:nth-child(2n+0) {
+    flex-direction: row-reverse;
+  }
+  .postcard:nth-child(2n+1) .postcard__text::before {
+    left: -15px !important;
+    transform: rotate(5deg);
+  }
+  .postcard:nth-child(2n+0) .postcard__text::before {
+    right: -12px !important;
+    transform: rotate(-4deg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .postcard__text {
+    padding: 2rem 3.5rem;
+  }
+
+  .postcard__text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -20%;
+    height: 130%;
+    width: 52px;
+  }
+
+  .postcard.dark .postcard__text:before {
+    background: #ebeaea;
+  }
+
+  .postcard.light .postcard__text:before {
+    background: #ebeaea;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .header-main span {
+    font-size: 3rem !important;
+  }
+  .header-main p {
+    font-size: 1rem;
+  }
+  .header-main span::after {
+    content: " ";
+    font-size: 3rem !important;
+    position: relative;
+    animation: textrotate 8s linear infinite;
+    -webkit-animation: textrotate 8s linear infinite;
+  }
+}
+@media screen and (max-width: 620px) {
   .pxx-sm-0 {
     padding-left: 0%;
     padding-right: 0%;
@@ -994,7 +1065,7 @@ h2 {
     -webkit-animation: textrotate 8s linear infinite;
   }
 }
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   #footer p,
 #footer li a,
 #footer span {
@@ -1177,176 +1248,12 @@ h2 {
     content: "Dizayn";
   }
 }
-/* Cards */
-.postcard {
-  flex-wrap: wrap;
-  display: flex;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 10px;
-  margin: 0 0 2rem 0;
-  overflow: hidden;
-  position: relative;
-  color: #ffffff;
-}
-.postcard.dark {
-  background-color: #ebeaea;
-}
-.postcard .postcard__img {
-  max-height: 200px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: relative;
-}
-.postcard .postcard__img_link {
-  display: contents;
-}
-.postcard .postcard__text {
-  padding-right: 1.5rem;
-  padding-left: 1.8rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.postcard .postcard__preview-txt {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: justify;
-  height: 100%;
-}
-.postcard:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  border-radius: 10px;
-}
-
-@media screen and (min-width: 769px) {
-  .postcard {
-    flex-wrap: inherit;
-  }
-  .postcard .postcard__img {
-    max-width: 340px;
-    max-height: 100%;
-    transition: transform 0.3s ease;
-  }
-  .postcard .postcard__text {
-    padding: 3.8rem;
-    width: 100%;
-  }
-  .postcard .media.postcard__text:before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: -20%;
-    height: 130%;
-    width: 35px;
-  }
-  .postcard:hover .postcard__img {
-    transform: scale(1.1);
-  }
-  .postcard:nth-child(2n+1) {
-    flex-direction: row;
-  }
-  .postcard:nth-child(2n+0) {
-    flex-direction: row-reverse;
-  }
-  .postcard:nth-child(2n+1) .postcard__text::before {
-    left: -15px !important;
-    transform: rotate(5deg);
-  }
-  .postcard:nth-child(2n+0) .postcard__text::before {
-    right: -12px !important;
-    transform: rotate(-4deg);
-  }
-}
-@media screen and (min-width: 1024px) {
-  .postcard__text {
-    padding: 2rem 3.5rem;
-  }
-
-  .postcard__text:before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: -20%;
-    height: 130%;
-    width: 52px;
-  }
-
-  .postcard.dark .postcard__text:before {
-    background: #ebeaea;
-  }
-
-  .postcard.light .postcard__text:before {
-    background: #ebeaea;
-  }
-}
-/*******************Our Amazing Work Section*****************/
-.btn.checked {
-  background-color: #403d37;
-}
-
-/* Isotope Grid Styles */
-/* --------------------------------------- */
-/* clear fix */
-.grid:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* Isotope Item Styles */
-/* --------------------------------------- */
-.item {
-  width: 70px;
-  height: 70px;
-  margin: 5px;
+.filterDiv {
   float: left;
-  text-align: center;
+  display: none;
+  z-index: 100;
 }
 
-.item.round {
-  border-radius: 75px;
-}
-
-.item.yellow {
-  background: #DE910A;
-}
-
-.item.black {
-  background: #1B1B1E;
-}
-
-.item.red {
-  background: #AF2E1E;
-}
-
-.item.wide,
-.item.big {
-  width: 150px;
-}
-
-.item.tall,
-.item.big {
-  height: 150px;
-}
-
-.item .content {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  margin-top: -15px;
-  left: 0;
+.show {
   display: block;
-  color: #fff;
-  font-size: 20px;
-}
-
-.filters {
-  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

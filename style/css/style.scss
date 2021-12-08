@@ -140,10 +140,11 @@ header {
 .bg-parallax-img {
   position: relative;
   width: 100%;
-  background: #1d1f21;
+  background: #000000;
   animation: animate 7.5s ease-in-out infinite;
   display: flex;
   overflow: hidden;
+  // z-index: -2;
   // background-size: cover;
   // background: url("/style/img/bg-header.jpg") no-repeat center center fixed;
   background-position: center;
@@ -164,31 +165,31 @@ header {
   z-index: 0;
 }
 
-.shadow-title {
-  position: fixed;
-  top: 0;
-  // margin-top: 6px;
-  left: -14px;
-  width: 100%;
-  height: 300%;
-  text-align: left;
-  font-family: "Muli", sans-serif;
-  -webkit-writing-mode: vertical-lr;
-  writing-mode: vertical-lr;
-  font-size: 25vw;
-  line-height: 1;
-  color: rgba(240, 234, 234, 0.29);
-  background: linear-gradient(
-    90deg,
-    rgba(104, 104, 104, 0.077),
-    rgba(130, 129, 129, 0.836)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  z-index: 0;
-}
+// .shadow-title {
+//   position: fixed;
+//   top: 0;
+//   // margin-top: 6px;
+//   left: -14px;
+//   width: 100%;
+//   height: 300%;
+//   text-align: left;
+//   font-family: "Muli", sans-serif;
+//   -webkit-writing-mode: vertical-lr;
+//   writing-mode: vertical-lr;
+//   font-size: 25vw;
+//   line-height: 1;
+//   color: rgba(240, 234, 234, 0.29);
+//   background: linear-gradient(
+//     90deg,
+//     rgba(104, 104, 104, 0.077),
+//     rgba(130, 129, 129, 0.836)
+//   );
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   font-weight: 900;
+//   z-index: -1;
+// }
 
 #header {
   position: fixed;
@@ -232,7 +233,7 @@ header {
 .header-main {
   position: relative;
   top: 20%;
-  z-index: 100000;
+  // z-index: 100000;
   span {
     color: rgb(255, 255, 255);
     font-size: 70px;
@@ -492,7 +493,7 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: $z-1000;
+  // z-index: $z-1000;
   overflow: hidden;
   display: none;
 
@@ -938,7 +939,28 @@ h2 {
   left: 0;
   box-shadow: 0;
   width: 100%;
-  z-index: $z;
+  // z-index: $z;
+  z-index: 100;
+}
+.bottom_tawk_to{
+  position: fixed;
+  bottom: 65px;
+  right: 30px;
+  padding: 0;
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 5%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  z-index: 100;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-image: linear-gradient(#fe7c36,#150e0b);
+  border: 0;
+  
 }
 //contact-3cards
 .grid-item {
@@ -1040,14 +1062,13 @@ h2 {
 .courses .mix-target {
   display: none;
 }
-//@at-root
 .carousel-nav-icon {
   height: 15px;
   width: 15px;
   border-radius: 50%;
   font-size: 10px;
   color: rgb(255, 255, 255) !important;
-  z-index: $z;
+  z-index: $z-1000;
   // padding: 20px;
   // border: 1px solid #1a1a1a;
 }
@@ -1068,8 +1089,9 @@ h2 {
   }
 }
 
-//
-@media (max-width: 360px) {
+//////////////////////////////////////
+
+@media screen and (max-width: 360px) {
   .fs-sm-32 {
     font-size: 1.5rem !important;
   }
@@ -1077,8 +1099,7 @@ h2 {
     font-size: 3rem !important;
   }
 }
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   // .arrow-element {
   //   width: 40px;
   // }
@@ -1092,200 +1113,6 @@ h2 {
     font-size: $fs-lg-12;
   }
 }
-@media (max-width: 620px) {
-  .pxx-sm-0 {
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-  .header-main {
-    span {
-      font-size: 3rem !important;
-    }
-    p {
-      font-size: 1rem;
-    }
-    span::after {
-      content: " ";
-      font-size: 3rem !important;
-      position: relative;
-      // color: rgb(0, 0, 0);
-      animation: textrotate 8s linear infinite;
-      -webkit-animation: textrotate 8s linear infinite;
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  #footer {
-    p,
-    li a,
-    span {
-      font-size: 13px;
-    }
-  }
-  .text-sm-center {
-    text-align: center;
-  }
-  .fs-sm-16 {
-    font-size: 16px;
-  }
-  .shadow-title {
-    font-size: 40vw;
-  }
-}
-
-@keyframes animMenuReveal {
-  0% {
-    width: 0vw;
-  }
-
-  100% {
-    width: 100vw;
-  }
-}
-
-@keyframes animMenuRevealLinks {
-  0% {
-    width: 100%;
-  }
-
-  100% {
-    width: 0%;
-  }
-}
-
-@keyframes animMenuClose {
-  0% {
-    width: 100vw;
-    padding: 8em 3em 3em;
-  }
-
-  100% {
-    width: 0vw;
-    padding: 8em 0 0;
-  }
-}
-
-@keyframes animMenuCloseLinks {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 110%;
-  }
-}
-
-@keyframes animMenuRevealImg {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 720px;
-  }
-}
-
-@keyframes animMenuCloseImg {
-  0% {
-    width: 720px;
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes animScrollingContactTextLeft {
-  0% {
-    transform: translate(-20%, -100%);
-  }
-
-  100% {
-    transform: translate(-40%, -100%);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 $color-green;
-  }
-}
-@keyframes background {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes textrotate {
-  0% {
-    content: "Web saytlar";
-  }
-  50% {
-    content: "Web tetbiqler";
-  }
-  100% {
-    content: "Dizayn";
-  }
-}
-
-/* Cards */
-.postcard {
-  flex-wrap: wrap;
-  display: flex;
-
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 10px;
-  margin: 0 0 2rem 0;
-  overflow: hidden;
-  position: relative;
-  color: #ffffff;
-
-  &.dark {
-    background-color: #ebeaea;
-  }
-
-  .postcard__img {
-    max-height: 200px;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-  }
-
-  .postcard__img_link {
-    display: contents;
-  }
-
-  .postcard__text {
-    padding-right: 1.5rem;
-    padding-left: 1.8rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .postcard__preview-txt {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: justify;
-    height: 100%;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-    border-radius: 10px;
-  }
-}
-
 @media screen and (min-width: 769px) {
   .postcard {
     flex-wrap: inherit;
@@ -1358,51 +1185,163 @@ h2 {
     }
   }
 }
+@media screen and (max-width: 1280px) {
+  .header-main {
+    span {
+      font-size: 3rem !important;
+    }
+    p {
+      font-size: 1rem;
+    }
+    span::after {
+      content: " ";
+      font-size: 3rem !important;
+      position: relative;
+      // color: rgb(0, 0, 0);
+      animation: textrotate 8s linear infinite;
+      -webkit-animation: textrotate 8s linear infinite;
+    }
+  }
+}
+@media screen and (max-width: 620px) {
+  .pxx-sm-0 {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  .header-main {
+    span {
+      font-size: 3rem !important;
+    }
+    p {
+      font-size: 1rem;
+    }
+    span::after {
+      content: " ";
+      font-size: 3rem !important;
+      position: relative;
+      // color: rgb(0, 0, 0);
+      animation: textrotate 8s linear infinite;
+      -webkit-animation: textrotate 8s linear infinite;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  #footer {
+    p,
+    li a,
+    span {
+      font-size: 13px;
+    }
+  }
+  .text-sm-center {
+    text-align: center;
+  }
+  .fs-sm-16 {
+    font-size: 16px;
+  }
+  .shadow-title {
+    font-size: 40vw;
+  }
+}
+@keyframes animMenuReveal {
+  0% {
+    width: 0vw;
+  }
 
-/*******************Our Amazing Work Section*****************/
+  100% {
+    width: 100vw;
+  }
+}
+@keyframes animMenuRevealLinks {
+  0% {
+    width: 100%;
+  }
 
-// .btn-group { margin-bottom: 10px; }
-.btn.checked { background-color: #403d37; }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes animMenuClose {
+  0% {
+    width: 100vw;
+    padding: 8em 3em 3em;
+  }
 
-/* Isotope Grid Styles */
-/* --------------------------------------- */
+  100% {
+    width: 0vw;
+    padding: 8em 0 0;
+  }
+}
+@keyframes animMenuCloseLinks {
+  0% {
+    width: 0%;
+  }
 
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
+  100% {
+    width: 110%;
+  }
+}
+@keyframes animMenuRevealImg {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 720px;
+  }
+}
+@keyframes animMenuCloseImg {
+  0% {
+    width: 720px;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+@keyframes animScrollingContactTextLeft {
+  0% {
+    transform: translate(-20%, -100%);
+  }
+
+  100% {
+    transform: translate(-40%, -100%);
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 $color-green;
+  }
+}
+@keyframes background {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes textrotate {
+  0% {
+    content: "Web saytlar";
+  }
+  50% {
+    content: "Web tetbiqler";
+  }
+  100% {
+    content: "Dizayn";
+  }
 }
 
-/* Isotope Item Styles */
-/* --------------------------------------- */
-.item {
-  width: 70px;
-  height: 70px;
-  margin: 5px;
+.filterDiv {
   float: left;
-  text-align: center;
+  display: none;
+  z-index: $z-100;
 }
-.item.round { border-radius: 75px; }
 
-.item.yellow { background: #DE910A; }
-.item.black { background: #1B1B1E; }
-.item.red { background: #AF2E1E; }
-
-.item.wide,
-.item.big { width: 150px; }
-.item.tall,
-.item.big { height: 150px; }
-
-.item .content {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  margin-top: -15px;
-  left: 0;
+.show {
   display: block;
-  color: #fff;
-  font-size: 20px;
 }
 
-.filters { margin-bottom: 20px; }
+

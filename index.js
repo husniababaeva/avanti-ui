@@ -23,9 +23,15 @@ $(document).ready(function () {
     if ($this.hasClass("is-active")) {
       $(".fsmenu, .logo").removeClass("is-active");
       $(".fsmenu, .logo").addClass("close-menu");
+      // $("is-active").css({
+      //   "z-index": "0",
+      // })
     } else {
       $(".fsmenu, .logo").removeClass("close-menu");
       $(".fsmenu, .logo").addClass("is-active");
+      $("close-menu").css({
+        "display": "none",
+      })
     }
     $this.toggleClass("is-active");
   });
@@ -41,56 +47,9 @@ $(document).ready(function () {
     }
   );
 
-  // Create object to store filter for each group
-  var buttonFilters = {};
-  var buttonFilter = "*";
-  // Create new object for the range filters and set default values
-  // The default values should correspond to the default values from the slider
 
-  // Initialise Isotope
-  // Set the item selector
-  var $grid = $(".grid").isotope({
-    itemSelector: ".item",
-    layout: "masonry",
-    // use filter function
-    filter: function () {
-      var $this = $(this);
-      return $this.is(buttonFilter);
-    },
-  });
-
-  // Look inside element with .filters class for any clicks on elements with .btn
-  $(".filters").on("click", ".btn", function () {
-    var $this = $(this);
-    // Get group key from parent btn-group (e.g. data-filter-group="color")
-    var $buttonGroup = $this.parents(".btn-group");
-    var filterGroup = $buttonGroup.attr("data-filter-group");
-    // set filter for group
-    buttonFilters[filterGroup] = $this.attr("data-filter");
-    // Combine filters or set the value to * if buttonFilters
-    buttonFilter = concatValues(buttonFilters) || "*";
-    // Log out current filter to check that it's working when clicked
-    console.log(buttonFilter);
-    // Trigger isotope again to refresh layout
-    $grid.isotope();
-  });
-
-  // change checked class on btn-filter to toggle which one is active
-  $(".btn-group").each(function (i, buttonGroup) {
-    var $buttonGroup = $(buttonGroup);
-    $buttonGroup.on("click", ".btn-filter", function () {
-      $buttonGroup.find(".checked").removeClass("checked");
-      $(this).addClass("checked");
-    });
-  });
+  
 });
-function concatValues(obj) {
-  var value = "";
-  for (var prop in obj) {
-    value += obj[prop];
-  }
-  return value;
-}
 
 var swiper = new Swiper(".autoslide", {
   spaceBetween: 30,
@@ -105,41 +64,47 @@ var swiper = new Swiper(".autoslide", {
   },
 });
 
-//filter-portfolio
-// $("#mix-wrapper").mixItUp({
-//   load: {
-//     sort: "order:asc",
-//   },
-//   animation: {
-//     effects: "fade rotateZ(-180deg)",
-//     duration: 700,
-//   },
-//   selectors: {
-//     target: ".mix-target",
-//     filter: ".filter-btn",
-//     sort: ".sort-btn",
-//   },
-//   callbacks: {
-//     onMixEnd: function (state) {
-//       console.log(state);
-//     },
-//   },
-// });
-// $(function () {
-//   var filterList = {
-//     init: function () {
-//       $("#portfoliolist").mixItUp({
-//         selectors: {
-//           target: ".portfolio",
-//           filter: ".filter",
-//         },
-//         load: {
-//           filter: ".app",
-//         },
-//       });
-//     },
-//   };
+/*******************Our Amazing Work Section*****************/
 
-//   // Run the show!
-//   filterList.init();
-// });
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn--portfolio");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}

@@ -15,7 +15,7 @@
 
 <body class="position-relative">
     <header class="bg-parallax-img">
-        <div class="shadow-title parallax-top-shadow">avanti</div>
+        <!-- <div class="shadow-title parallax-top-shadow">avanti</div> -->
         <div class="section-parallax parallax-00"
             style="background-image: url('http://www.ivang-design.com/svg-load/parallax/parallax-0.png');"></div>
         <div class="section-parallax parallax-01"
@@ -157,7 +157,7 @@
         <div class="container header-main">
             <div id="position-center" class="row d-flex align-items-center">
                 <div class="col-sm-12 col-lg-5">
-                    <div><span>Sizin tələblər əsasında<br /></span> </div>
+                    <div><span>Sizin tələblər əsasında<br /></span></div>
                     <p>
                         Funksional ҫalışan korporativ, internet magaza, elan, məhsulların
                         kataloqu, promo, mikro veb səhifələrvə s. kimi hər növ veb
@@ -177,28 +177,6 @@
     </header>
 
     <main>
-        <!-- <section id="aboutus" class="section">
-            <div class="container">
-                <div class=" row">
-                    <div class="col-12 text-center">
-                        <span class="font-weight-bold line-bottom fs-lg-25">Biz kimik?</span>
-                        <p class="mx-4 my-3">Avanti Şirkətinə xoş gəlmisiniz! Burada biz bildiyimiz və sevdiyimiz işlə
-                            məşquluq. Bizim missiya — dəyərlərimizə əsaslanaraq sizin biznesinizin internetdə inkişafı
-                            üçün
-                            sayt yaradılması və irəlidilməsi üzrə ən uyğun həllin təklif olunmasıdır.
-                            Bu sahədə biz kifayət qədər təcrübəyə malik olduğundan sizə veb-texnologiyaları sahəsində
-                            sadə,
-                            keyfiyyətli və eyni zamanda ucuz variantlar təklif etməyə hazırıq.</br>
-                            Avanti şirkəti — sayt yaratmaq və internetdə biznesinizə start vermək üçün ən yaxşı
-                            variantdır.
-                        </p>
-                        <a href="#"
-                            class="d-inline-flex btn-read-more text-decoration-none justify-content-center align-items-center my-3 px-4 py-2">Ətraflı
-                            oxu</a>
-                    </div>
-                </div>
-            </div>
-        </section> -->
         <section id="services-home-page ">
             <div class="parallax position-relative">
                 <div class="overlay-black"></div>
@@ -325,36 +303,7 @@
                 </div>
             </div>
         </section>
-        <section class="container" style="padding: 30px;">
-            <div class="filters ">
-                <div class="row">
-                    <div class="btn-group" role="group" data-filter-group="color" aria-label="Kind">
-                        <button type="button" class="btn btn-sm btn-secondary btn-filter checked"
-                            data-filter="">All</button>
-                        <button type="button" class="btn btn-sm btn-secondary btn-filter"
-                            data-filter=".yellow">Yellow</button>
-                        <button type="button" class="btn btn-sm btn-secondary btn-filter"
-                            data-filter=".black">Black</button>
-                        <button type="button" class="btn btn-sm btn-secondary btn-filter"
-                            data-filter=".red">Red</button>
-                    </div>
-                </div>
-
-
-                <div class="grid">
-                    <div class="item small round yellow"><span class="content">1</span></div>
-                    <div class="item small round black"><span class="content">2</div>
-                    <div class="item small square yellow"><span class="content">4</span></div>
-                    <div class="item small square black"><span class="content">5</span></div>
-                    <div class="item small square red"><span class="content">6</span></div>
-                    <div class="item wide round yellow"><span class="content">7</span></div>
-                    <div class="item big square black"><span class="content">17</span></div>
-                    <div class="item big square red"><span class="content">18</span></div>
-                    <div class="item big square red"><span class="content">18</span></div>
-                    <div class="item wide round yellow"><span class="content">7</span></div>
-                </div>
-        </section>
-        <!-- <section id="portfolio">
+        <section id="portfolio">
             <div class="container">
                 <div class="row my-5">
                     <div class="col-12 my-3">
@@ -363,29 +312,26 @@
                                 <span class="font-weight-bolder line-bottom fs-lg-25 mt-3">Portfolio</span>
                             </div>
                             <div class=" col-lg-8 col-xs-7 filters clearfix mb-3 text-sm-center">
-                                <div class="row text-sm-center">
-                                    <div class="col-xs-3 col-md-2 filter-btn d-inline-block mt-3" data-filter="all">
-                                        <a href="#"
-                                            class="text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none">Hamısı</a>
+                                <div id="myBtnContainer" class="row text-sm-center">
+                                    <div class="col-xs-3 col-md-2 filter-btn d-inline-block mt-3 ">
+                                        <div class="text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none active btn--portfolio"
+                                            onclick="filterSelection('all')">Hamısı</div>
                                     </div>
-                                    <div class="col-xs-7  col-md-3 filter-btn d-inline-block mt-3"
-                                        data-filter=".websəhifələr">
-                                        <a href="#"
-                                            class=" text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none">Web səhifələr</a>
+                                    <div class="col-xs-7  col-md-3 filter-btn d-inline-block mt-3">
+                                        <div class=" text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none btn--portfolio"
+                                            onclick="filterSelection('web-pages')">Web səhifələr</div>
                                     </div>
-                                    <div class="col-xs-12  col-md-3 filter-btn d-inline-block mt-3"
-                                        data-filter=".webtetbiqler">
-                                        <a href="#"
-                                            class=" text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none">Web tetbiqler</a>
+                                    <div class="col-xs-12  col-md-3 filter-btn d-inline-block mt-3">
+                                        <div class=" text-dark font-weight-bold fs-lg-20 link-bottom-line text-decoration-none btn--portfolio"
+                                            onclick="filterSelection('web-apps')">Web tetbiqler</div>
                                     </div>
                                     <div class="col-xs-12  col-md-2 filter-btn d-inline-block mt-3" data-filter=".logo">
-                                        <a href="#"
-                                            class="text-dark font-weight-bold fs-lg-20 link-bottom-linetext-decoration-none">Logo</a>
+                                        <div class="text-dark font-weight-bold fs-lg-20 link-bottom-linetext-decoration-none btn--portfolio"
+                                            onclick="filterSelection('logo')">Logo</div>
                                     </div>
-                                    <div class="col-xs-12  col-md-2 filter-btn d-inline-block mt-3"
-                                        data-filter=".eticaret">
-                                        <a href="#"
-                                            class=" text-dark font-weight-bold fs-lg-20 link-bottom-linetext-decoration-none">E-ticaret</a>
+                                    <div class="col-xs-12  col-md-2 filter-btn d-inline-block mt-3">
+                                        <div class=" text-dark font-weight-bold fs-lg-20 link-bottom-linetext-decoration-none btn--portfolio"
+                                            onclick="filterSelection('e-commerce')">E-ticaret</div>
                                     </div>
                                 </div>
                             </div>
@@ -395,10 +341,9 @@
             </div>
 
             <div class="mx-5">
-                <div id="portfoliolist" class="row">
-
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio app" data-cat="app">
-                        <div class="card-portfolio">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio filterDiv web-pages">
+                        <div class="card-portfolio ">
                             <div class="overlay-black"></div>
                             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                                 class="w-100" alt="description" />
@@ -417,7 +362,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio app" data-cat="app">
+                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio filterDiv logo">
                         <div class="card-portfolio">
                             <div class="overlay-black"></div>
                             <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
@@ -437,8 +382,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio app" data-cat="app">
-                        <div class="card-portfolio">
+                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio filterDiv logo">
+                        <div class="card-portfolio ">
                             <div class="overlay-black"></div>
                             <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
                                 class="w-100" alt="description" />
@@ -457,9 +402,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio icon" data-cat="icon">
-                        <div class="card-portfolio">
+                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio filterDiv web-apps logo">
+                        <div class="card-portfolio ">
                             <div class="overlay-black"></div>
                             <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
                                 class="w-100" alt="description" />
@@ -478,8 +422,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio icon" data-cat="icon">
-                        <div class="card-portfolio">
+                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio filterDiv e-commerce web-pages">
+                        <div class="card-portfolio ">
                             <div class="overlay-black"></div>
                             <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
                                 class="w-100" alt="description" />
@@ -498,9 +442,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio icon" data-cat="icon">
-                        <div class="card-portfolio">
+                    <div class="col-xs-12 col-md-6 col-lg-4 mt-4 pxx-sm-0 portfolio filterDiv e-commerce wep-apps">
+                        <div class="card-portfolio ">
                             <div class="overlay-black"></div>
                             <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                                 class="w-100" alt="description" />
@@ -521,7 +464,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <section id="comments " class="section">
             <div class="container my-5">
                 <div class="swiper autoslide text-center my-5">
@@ -573,7 +516,7 @@
                     <div class="col-2 mb-3 ">
                         <div class="row d-flex justify-content-around align-items-center">
                             <div class="col-2 d-flex align-items-center p-2">
-                                <a href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <a href="#carouselExampleIndicators" role="div" data-slide="prev">
                                     <div class="carousel-nav-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
                                             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -651,6 +594,7 @@
             </div>
         </section>
     </main>
+
 
     <footer id="footer" class="position-relative mt-5 pb-5">
         <div class="container-lg">
@@ -758,6 +702,43 @@
         </div>
     </div>
 
+    <a href="#" class="bottom_tawk_to text-center z" data-target=".callme" data-toggle="modal">
+        <i class="far fa-comment-dots text-white"></i>
+    </a>
+    <div class="modal shadow rounded fade callme my-5 z in" id="login_page" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center py-3">
+                    <div class="modal-title text-center" id="exampleModalLabelLogin">
+                        <h5 class="m-0">Əlaqə nömrənizi daxil edin</h5>
+                    </div>
+
+                </div>
+                <div class="modal-body py-5">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-8 ">
+                            <form action="" id="requestacallformLogin" method="POST" name="requesttacallform">
+                                <div class="form-group">
+                                    <label for="">+994</label>
+                                    <div class="input-group">
+                                        <input type="tel" class="form-control" placeholder="Mobil nömrə" name="tel"/>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <button type="submit" class="btn btn-outline-success w-100 shadow btn-one">Mənə zəng et</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
