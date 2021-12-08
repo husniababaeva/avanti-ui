@@ -1226,28 +1226,6 @@ h2 {
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes textrotate {
-  0% {
-    content: "Web saytlar";
-  }
-  50% {
-    content: "Web tetbiqler";
-  }
-  100% {
-    content: "Dizayn";
-  }
-}
-@keyframes textrotate {
-  0% {
-    content: "Web saytlar";
-  }
-  50% {
-    content: "Web tetbiqler";
-  }
-  100% {
-    content: "Dizayn";
-  }
-}
 .filterDiv {
   float: left;
   display: none;
