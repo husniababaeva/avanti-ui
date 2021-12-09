@@ -207,7 +207,7 @@
         </div>
     </main>
 
-    <footer id="footer" class="position-relative mt-5 ">
+    <footer id="footer" class="position-relative mt-5 pb-5">
         <div class="container-lg">
             <div class="row pt-5 pb-3 d-flex justify-content-between">
                 <div class="col-md-5 col-xs-8 justify-content-start pt-4">
@@ -242,22 +242,21 @@
                     </div>
                 </div>
                 <div class="col-md-2 col-xs-8 pt-4">
-                    <span class="font-weight-bold d-inline-block pb-3 color-black link-bottom-line">Kateqoriya</span>
+                    <span class="font-weight-bold d-inline-block pb-3 color-black ">Kateqoriya</span>
                     <ul class="list-unstyled text-dark">
                         <li class="mb-3">
                             <a href="aboutus.html"
-                                class="text-decoration-none text-dark link-bottom-line">Haqqımızda</a>
+                                class="text-decoration-none text-dark ">Haqqımızda</a>
                         </li>
                         <li class="mb-3">
-                            <a href="Blog.html"
-                                class="text-decoration-none text-dark link-bottom-line">Blog</a>
+                            <a href="Blog.html" class="text-decoration-none text-dark ">Blog</a>
                         </li>
                         <li class="mb-3">
                             <a href="portfolio.html"
-                                class="text-decoration-none text-dark link-bottom-line">Portfolio</a>
+                                class="text-decoration-none text-dark ">Portfolio</a>
                         </li>
                         <li class="mb-3">
-                            <a href="contact.html" class="text-decoration-none text-dark link-bottom-line">Əlaqə</a>
+                            <a href="contact.html" class="text-decoration-none text-dark ">Əlaqə</a>
                         </li>
                     </ul>
                 </div>
@@ -313,6 +312,43 @@
             </div>
         </div>
     </div>
+
+    <a href="#" class="bottom_tawk_to text-center z" data-target=".callme" data-toggle="modal">
+        <i class="far fa-comment-dots text-white"></i>
+    </a>
+    <div class="modal shadow rounded fade callme my-5 z in" id="login_page" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center py-3">
+                    <div class="modal-title text-center" id="exampleModalLabelLogin">
+                        <h5 class="m-0 font-weight-bolder">Əlaqə nömrənizi daxil edin</h5>
+                    </div>
+
+                </div>
+                <div class="modal-body py-5">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-8 ">
+                            <form action="" id="requestacallformLogin" method="POST" name="requesttacallform">
+                                <div class="form-group">
+                                    <label for="">+994</label>
+                                    <div class="input-group">
+                                        <input type="tel" class="form-control" placeholder="Mobil nömrə" name="tel" />
+                                    </div>
+                                </div>
+                            </form>
+
+                            <button type="submit" class="btn btn-outline-success w-100 shadow btn-one">Mənə zəng
+                                et</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
