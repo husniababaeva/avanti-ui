@@ -51,18 +51,7 @@ $(document).ready(function () {
   
 });
 
-var swiper = new Swiper(".autoslide", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-  },
-});
+
 
 /*******************Our Amazing Work Section*****************/
 
