@@ -52,6 +52,14 @@ body:before {
   z-index: 999999;
 }
 
+.monserrat-font {
+  font-family: "Montserrat";
+}
+
+.mt-150 {
+  margin-top: 150px;
+}
+
 .color-orange {
   color: #ffa217;
 }
@@ -65,6 +73,10 @@ body:before {
 }
 
 .bg-orange {
+  background-color: #ffa217;
+}
+
+.bg-grey {
   background-color: #ffa217;
 }
 
@@ -94,6 +106,10 @@ body:before {
 
 .fs-20 {
   font-size: 20px;
+}
+
+.font-weight-900 {
+  font-weight: 900;
 }
 
 .logo {
@@ -151,8 +167,11 @@ header {
   position: fixed;
   top: 0px;
   background-color: none !important;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   width: 100%;
   z-index: 999999;
+  margin-bottom: 50px;
 }
 #header ul {
   list-style: none;
@@ -160,27 +179,37 @@ header {
 #header ul li {
   position: relative;
 }
+#header ul li:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+}
 #header ul li a {
   color: #fff;
   font-weight: bold;
   text-decoration: none;
 }
-#header ul li ul {
-  display: none;
+#header ul li .dropdown {
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
-  overflow: auto;
-  left: -12px;
-  width: 120px;
-  top: 35px;
-  background-color: #ffffff;
-  box-shadow: rgba(112, 112, 122, 0.5) 0px 7px 29px 0px;
-  padding: 15px;
+  padding: 20px 0;
+  top: 30px;
+  transform: translateY(50px);
+  left: 0;
+  width: 130px;
+  background-color: #fff;
+  box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.16);
+  z-index: 111;
+  transition: 0.4s all;
 }
-#header ul li ul li a {
-  color: black !important;
+#header ul li .dropdown li a {
+  color: #000;
+  padding: 10px;
+  font-weight: 400;
 }
-#header ul li:hover ul {
-  display: block;
+#header ul .navbar-dropdown .dropdown a:hover {
+  padding-left: 30px;
 }
 
 .header-main {
@@ -189,14 +218,14 @@ header {
 }
 .header-main span {
   color: white;
-  font-size: 70px;
+  font-size: 60px;
   position: translateX(-50%) relative;
   font-weight: 900;
   font-family: "Muli", sans-serif;
 }
 .header-main span::after {
   content: " ";
-  font-size: 4.7rem;
+  font-size: 2.5rem;
   position: relative;
   color: white !important;
   animation: textrotate 8s linear infinite;
@@ -217,7 +246,8 @@ header {
   color: #ffffff;
 }
 
-#about-page h2 {
+#about-header-main h2 {
+  font-family: "Montserrat";
   font-size: 65px;
   display: flex;
   align-items: center;
@@ -226,8 +256,33 @@ header {
   font-weight: 900;
 }
 
-h2 {
+#blog-header-main h2 {
   font-family: "Montserrat";
+  font-size: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+}
+
+#contact-header-main h2 {
+  font-family: "Montserrat";
+  font-size: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+}
+
+#portfolio-header-main h2 {
+  font-family: "Montserrat";
+  font-size: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   font-weight: 900;
 }
 
@@ -740,7 +795,7 @@ h2 {
   transition: 0.3s all ease-in-out;
 }
 .signup-form input[type=submit]:hover {
-  background: #3a3861;
+  background: #e1702a;
   cursor: pointer;
 }
 
@@ -981,6 +1036,12 @@ h2 {
   transform: scale(1.1);
 }
 
+#footer {
+  position: fixed;
+  margin-top: 50px;
+  bottom: 0;
+}
+
 @media screen and (max-width: 1068px) {
   .blog-post {
     max-width: 50rem;
@@ -1032,34 +1093,13 @@ h2 {
     font-size: 1rem;
   }
   .header-main span::after {
-    content: " ";
     font-size: 3rem !important;
-    position: relative;
-    animation: textrotate 8s linear infinite;
-    -webkit-animation: textrotate 8s linear infinite;
-  }
-  .header-main .fs-sm-12 {
-    font-size: 12px;
   }
 }
 @media screen and (max-width: 620px) {
   .pxx-sm-0 {
     padding-left: 0%;
     padding-right: 0%;
-  }
-
-  .header-main span {
-    font-size: 3rem !important;
-  }
-  .header-main p {
-    font-size: 1rem;
-  }
-  .header-main span::after {
-    content: " ";
-    font-size: 3rem !important;
-    position: relative;
-    animation: textrotate 8s linear infinite;
-    -webkit-animation: textrotate 8s linear infinite;
   }
 }
 @media screen and (max-width: 992px) {
