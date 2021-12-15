@@ -1,6 +1,7 @@
 $(document).ready(function () {
   $(this).scrollTop(0);
   var scroll_start = 0;
+  
   var startchange = $("#header");
   var offset = startchange.offset();
   if (startchange.length) {
