@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400;1,700&display=swap");
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
@@ -54,6 +55,10 @@ body:before {
 
 .monserrat-font {
   font-family: "Montserrat";
+}
+
+.frauncues-font {
+  font-family: "Fraunces";
 }
 
 .mt-150 {
@@ -252,7 +257,7 @@ button {
 }
 
 #about-header-main h2 {
-  font-family: "Montserrat";
+  font-family: "Fraunces";
   font-size: 65px;
   display: flex;
   align-items: center;
@@ -262,7 +267,7 @@ button {
 }
 
 #blog-header-main h2 {
-  font-family: "Montserrat";
+  font-family: "Fraunces";
   font-size: 65px;
   display: flex;
   align-items: center;
@@ -272,7 +277,7 @@ button {
 }
 
 #contact-header-main h2 {
-  font-family: "Montserrat";
+  font-family: "Fraunces";
   font-size: 65px;
   display: flex;
   align-items: center;
@@ -282,7 +287,7 @@ button {
 }
 
 #portfolio-header-main h2 {
-  font-family: "Montserrat";
+  font-family: "Fraunces";
   font-size: 65px;
   display: flex;
   align-items: center;
@@ -1386,10 +1391,21 @@ img {
   flex: 1;
   height: 8px;
   border-radius: 99em;
-  background-color: #D9D4CD;
-  background-image: linear-gradient(to right, #F99970 30%, #D9D4CD 30%, #D9D4CD 100%);
+  background-color: #d9d4cd;
+  background-image: linear-gradient(to right, #f99970 30%, #d9d4cd 30%, #d9d4cd 100%);
 }
 
 :focus {
   outline: 0;
+}
+
+.blog-date::after {
+  content: "";
+  display: block;
+  width: -110px;
+  height: 1px;
+  margin-left: -110px;
+  background: #ffa217;
+  mix-blend-mode: multiply;
+  margin-top: 0.67rem;
 }/*# sourceMappingURL=style.css.map */
