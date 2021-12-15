@@ -136,6 +136,11 @@ header {
   height: 100vh;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 .bg-parallax-img {
   position: relative;
   width: 100%;
@@ -338,6 +343,12 @@ header {
 .btn-read-more:hover::after {
   top: 0px;
   left: 0px;
+}
+
+.current-bottom-line {
+  display: block;
+  content: "";
+  border-bottom: solid 1px #ffa217;
 }
 
 .link-bottom-line:after {
@@ -669,7 +680,7 @@ header {
   width: 100%;
 }
 
-.card-portfolio h5 {
+.card-portfolio h6 {
   letter-spacing: 1px;
   height: 60px;
   margin: 0;
@@ -682,6 +693,7 @@ header {
 .card-portfolio .rollover {
   line-height: 1.4em;
   padding: 18px 20px;
+  font-size: 16px;
   opacity: 0;
   transition: all 0.5s ease;
 }
@@ -875,7 +887,7 @@ header {
   font-size: 20px;
   z-index: 100;
   border-radius: 50%;
-  background-image: linear-gradient(#ffba44, #000000);
+  background-image: linear-gradient(#ffa217, #000000);
   border: 0;
 }
 

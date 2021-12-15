@@ -28,9 +28,8 @@ $bg-black: #000000;
 $bg-white: #ecece9;
 $bg-grey: #464444;
 
-
 $mx-100: 100px;
-$mt-150:150px;
+$mt-150: 150px;
 
 $z-100: 100;
 $z-1000: 1000;
@@ -83,8 +82,12 @@ body {
 .z {
   z-index: $z;
 }
-.monserrat-font{font-family:$monserrat-font ;}
-.mt-150{margin-top: $mt-150;}
+.monserrat-font {
+  font-family: $monserrat-font;
+}
+.mt-150 {
+  margin-top: $mt-150;
+}
 .color-orange {
   color: $color-orange;
 }
@@ -97,7 +100,7 @@ body {
 .bg-orange {
   background-color: $color-orange;
 }
-.bg-grey{
+.bg-grey {
   background-color: $color-orange;
 }
 .bg-banner-img {
@@ -123,7 +126,9 @@ body {
 .fs-20 {
   font-size: $fs-20;
 }
-.font-weight-900{font-weight: 900;}
+.font-weight-900 {
+  font-weight: 900;
+}
 .logo {
   font-size: $fs-25;
   font-weight: bold;
@@ -145,6 +150,10 @@ a:hover {
 header {
   position: relative;
   height: 100vh;
+}
+button{
+  background-color: transparent;
+  border: none;
 }
 .bg-parallax-img {
   position: relative;
@@ -396,7 +405,11 @@ header {
     left: 0px;
   }
 }
-
+.current-bottom-line{
+  display: block;
+  content: "";
+  border-bottom: solid 1px $color-orange;
+}
 .link-bottom-line:after {
   display: block;
   content: "";
@@ -784,7 +797,7 @@ header {
   transition: all 0.5s ease;
   width: 100%;
 }
-.card-portfolio h5 {
+.card-portfolio h6 {
   //font: bold 1em/1.125em 'Montserrat', Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   height: 60px;
@@ -798,6 +811,7 @@ header {
 .card-portfolio .rollover {
   line-height: 1.4em;
   padding: 18px 20px;
+  font-size: 16px;
   opacity: 0;
   transition: all 0.5s ease;
 }
@@ -1009,7 +1023,7 @@ header {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background-image: linear-gradient($color-light-orange, $color-black);
+  background-image: linear-gradient($color-orange, $color-black);
   border: 0;
 }
 //contact-3cards
@@ -1173,7 +1187,7 @@ header {
     }
   }
 }
-#footer{
+#footer {
   position: fixed;
   margin-top: 50px;
   bottom: 0;
