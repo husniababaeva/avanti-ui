@@ -169,6 +169,21 @@ button {
   z-index: 0;
 }
 
+.page-link {
+  color: #000;
+  background-color: transparent;
+  border: 0;
+}
+
+.page-link:hover {
+  border-radius: 50%;
+  border-color: #ffa217;
+  background-color: #ffa217;
+  color: white;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
 .header-main {
   position: relative;
   top: 20%;

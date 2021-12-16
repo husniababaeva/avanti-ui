@@ -185,7 +185,20 @@ button {
   background-size: cover;
   z-index: 0;
 }
-
+.page-link{
+  color: #000;
+  background-color: transparent;
+  border: 0;
+  // padding: 15px;
+}
+.page-link:hover{
+  border-radius: 50%;
+  border-color: #ffa217;
+  background-color: #ffa217;
+  color: white;
+  padding-left: 14px;
+  padding-right: 14px;
+}
 // .shadow-title {
 //   position: fixed;
 //   top: 0;
