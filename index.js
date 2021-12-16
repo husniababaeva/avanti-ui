@@ -9,7 +9,7 @@ $(document).ready(function () {
       scroll_start = $(this).scrollTop();
       if (scroll_start > offset.top) {
         $("#header").css({
-          "background-color": "rgba(255, 255, 255, 0.30)",
+          "background-color": "rgba(0, 0, 0, 0.425)",
           "backdrop-filter": "blur(4px)",
         });
       } else {

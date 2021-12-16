@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400;1,700&display=swap");
 :root {
   --d: 700ms;
@@ -53,10 +52,6 @@ body:before {
   z-index: 999999;
 }
 
-.monserrat-font {
-  font-family: "Montserrat";
-}
-
 .frauncues-font {
   font-family: "Fraunces";
 }
@@ -75,6 +70,7 @@ body:before {
 
 .color-grey {
   color: #8a8a8a;
+  color: rgba(0, 0, 0, 0.427);
 }
 
 .bg-orange {
@@ -173,6 +169,34 @@ button {
   z-index: 0;
 }
 
+.header-main {
+  position: relative;
+  top: 20%;
+}
+.header-main span {
+  color: white;
+  font-size: 60px;
+  position: translateX(-50%) relative;
+  font-weight: 900;
+  font-family: "Muli", sans-serif;
+}
+.header-main span::after {
+  content: " ";
+  font-size: 2.5rem;
+  position: relative;
+  color: white !important;
+  animation: textrotate 8s linear infinite;
+  -webkit-animation: textrotate 8s linear infinite;
+}
+.header-main p {
+  font-size: 25px;
+}
+.header-main .img-header {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
 #header {
   position: fixed;
   top: 0px;
@@ -220,34 +244,6 @@ button {
 }
 #header ul .navbar-dropdown .dropdown a:hover {
   padding-left: 30px;
-}
-
-.header-main {
-  position: relative;
-  top: 20%;
-}
-.header-main span {
-  color: white;
-  font-size: 60px;
-  position: translateX(-50%) relative;
-  font-weight: 900;
-  font-family: "Muli", sans-serif;
-}
-.header-main span::after {
-  content: " ";
-  font-size: 2.5rem;
-  position: relative;
-  color: white !important;
-  animation: textrotate 8s linear infinite;
-  -webkit-animation: textrotate 8s linear infinite;
-}
-.header-main p {
-  font-size: 25px;
-}
-.header-main .img-header {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
 }
 
 #services-home-page {
@@ -1014,6 +1010,121 @@ button {
   z-index: 100;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.blog-layout {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 2rem;
+}
+
+.blog-column {
+  padding: 0 1.5rem;
+  grid-column: span 5;
+}
+@media (min-width: 1200px) {
+  .blog-column {
+    grid-column: span 1;
+    border-right: 1px solid #eb952b;
+  }
+  .blog-column:last-child {
+    border-right: none;
+  }
+}
+@media (min-width: 1200px) {
+  .blog-column:nth-child(2) {
+    grid-column: span 2;
+  }
+}
+
+.article + .article {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid #eb952b;
+}
+
+.article-img + * {
+  margin-top: 1rem;
+}
+
+.article-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-title {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  line-height: 1.25;
+  color: #000;
+}
+.article-title--large {
+  font-size: 2rem;
+}
+.article-title--large + * {
+  margin-top: 1.5rem;
+}
+.article-title--medium {
+  font-size: 1.5rem;
+}
+.article-title--medium + * {
+  margin-top: 0.75rem;
+}
+.article-title--small {
+  font-size: 1.25rem;
+}
+.article-title--small + * {
+  margin-top: 0.75rem;
+}
+
+.article-excerpt,
+.article-creditation {
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+.article-excerpt p + p,
+.article-creditation p + p {
+  margin-top: 1.5rem;
+}
+
+.article-category {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  display: block;
+}
+.article-category svg {
+  max-width: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.podcast-progression {
+  flex: 1;
+  height: 8px;
+  border-radius: 99em;
+  background-color: #d9d4cd;
+  background-image: linear-gradient(to right, #f99970 30%, #d9d4cd 30%, #d9d4cd 100%);
+}
+
+:focus {
+  outline: 0;
+}
+
+.blog-date::after {
+  content: "";
+  display: block;
+  width: -110px;
+  height: 1px;
+  margin-left: -110px;
+  background: #ffa217;
+  mix-blend-mode: multiply;
+  margin-top: 0.67rem;
+}
+
 .show {
   display: block;
 }
@@ -1294,118 +1405,4 @@ button {
   100% {
     transform: rotate(360deg);
   }
-}
-img {
-  display: block;
-  max-width: 100%;
-}
-
-.blog-layout {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-row-gap: 2rem;
-}
-
-.blog-column {
-  padding: 0 1.5rem;
-  grid-column: span 5;
-}
-@media (min-width: 1200px) {
-  .blog-column {
-    grid-column: span 1;
-    border-right: 1px solid #eb952b;
-  }
-  .blog-column:last-child {
-    border-right: none;
-  }
-}
-@media (min-width: 1200px) {
-  .blog-column:nth-child(2) {
-    grid-column: span 2;
-  }
-}
-
-.article + .article {
-  padding-top: 2rem;
-  margin-top: 2rem;
-  border-top: 1px solid #eb952b;
-}
-
-.article-img + * {
-  margin-top: 1rem;
-}
-
-.article-link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.article-title {
-  font-family: "Fraunces", serif;
-  font-weight: 900;
-  line-height: 1.25;
-  color: #000;
-}
-.article-title--large {
-  font-size: 2rem;
-}
-.article-title--large + * {
-  margin-top: 1.5rem;
-}
-.article-title--medium {
-  font-size: 1.5rem;
-}
-.article-title--medium + * {
-  margin-top: 0.75rem;
-}
-.article-title--small {
-  font-size: 1.25rem;
-}
-.article-title--small + * {
-  margin-top: 0.75rem;
-}
-
-.article-excerpt,
-.article-creditation {
-  font-size: 1.125rem;
-  line-height: 1.4;
-}
-.article-excerpt p + p,
-.article-creditation p + p {
-  margin-top: 1.5rem;
-}
-
-.article-category {
-  font-weight: 500;
-  margin-bottom: 1rem;
-  display: block;
-}
-.article-category svg {
-  max-width: 1.5rem;
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
-
-.podcast-progression {
-  flex: 1;
-  height: 8px;
-  border-radius: 99em;
-  background-color: #d9d4cd;
-  background-image: linear-gradient(to right, #f99970 30%, #d9d4cd 30%, #d9d4cd 100%);
-}
-
-:focus {
-  outline: 0;
-}
-
-.blog-date::after {
-  content: "";
-  display: block;
-  width: -110px;
-  height: 1px;
-  margin-left: -110px;
-  background: #ffa217;
-  mix-blend-mode: multiply;
-  margin-top: 0.67rem;
 }/*# sourceMappingURL=style.css.map */
