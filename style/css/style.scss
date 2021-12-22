@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,400;1,700&display=swap");
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
@@ -8,7 +8,7 @@
 
 $comfortaa-font: "Comfortaa";
 $monserrat-font: "Montserrat";
-$frauncues-font:"Fraunces";
+$frauncues-font: "Fraunces";
 
 $fs-25: 25px;
 $fs-50: 65px;
@@ -83,7 +83,9 @@ body {
   z-index: $z;
 }
 //fonts
-.frauncues-font{font-family: $frauncues-font;}
+.frauncues-font {
+  font-family: $frauncues-font;
+}
 
 //margin-padding-sizes
 .mt-150 {
@@ -185,13 +187,13 @@ button {
   background-size: cover;
   z-index: 0;
 }
-.page-link{
+.page-link {
   color: #000;
   background-color: transparent;
   border: 0;
   // padding: 15px;
 }
-.page-link:hover{
+.page-link:hover {
   border-radius: 50%;
   border-color: #ffa217;
   background-color: #ffa217;
@@ -224,6 +226,17 @@ button {
 //   font-weight: 900;
 //   z-index: -1;
 // }
+
+
+.error-imgs {
+  width: 500px;
+	&:not(.animated) {
+		.animable {
+			opacity: 0;
+		}
+	}
+}
+
 .header-main {
   position: relative;
   top: 20%;
@@ -399,19 +412,19 @@ button {
 
   border: 12px solid #f1f1f4;
 }
-.btn-simple-read-white {
-  letter-spacing: 1px;
-  padding: 0.5em 1em;
-  border: 1px solid white;
-  color: white;
-}
-.btn-simple-read-black {
-  letter-spacing: 1px;
+// .btn-simple-read-white {
+//   letter-spacing: 1px;
+//   padding: 0.5em 1em;
+//   border: 1px solid white;
+//   color: white;
+// }
+// .btn-simple-read-black {
+//   letter-spacing: 1px;
 
-  padding: 0.5em 1em;
-  border: 1px solid rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
-}
+//   padding: 0.5em 1em;
+//   border: 1px solid rgb(0, 0, 0);
+//   color: rgb(0, 0, 0);
+// }
 .btn-read-more {
   letter-spacing: 1px;
   margin-top: 1em;
@@ -1269,14 +1282,14 @@ img {
   outline: 0;
 }
 .blog-date::after {
-    content: "";
-    display: block;
-    width: -110px;
-    height: 1px;
-    margin-left: -110px;
-    background: $color-orange;
-    mix-blend-mode: multiply;
-    margin-top: 0.67rem;
+  content: "";
+  display: block;
+  width: -110px;
+  height: 1px;
+  margin-left: -110px;
+  background: $color-orange;
+  mix-blend-mode: multiply;
+  margin-top: 0.67rem;
 }
 .show {
   display: block;

@@ -184,6 +184,13 @@ button {
   padding-right: 14px;
 }
 
+.error-imgs {
+  width: 500px;
+}
+.error-imgs:not(.animated) .animable {
+  opacity: 0;
+}
+
 .header-main {
   position: relative;
   top: 20%;
@@ -339,20 +346,6 @@ button {
   width: 100%;
   position: relative;
   border: 12px solid #f1f1f4;
-}
-
-.btn-simple-read-white {
-  letter-spacing: 1px;
-  padding: 0.5em 1em;
-  border: 1px solid white;
-  color: white;
-}
-
-.btn-simple-read-black {
-  letter-spacing: 1px;
-  padding: 0.5em 1em;
-  border: 1px solid black;
-  color: black;
 }
 
 .btn-read-more {
