@@ -264,9 +264,6 @@ button {
   padding: 10px;
   font-weight: 400;
 }
-#header ul .navbar-dropdown .dropdown a:hover {
-  padding-left: 30px;
-}
 
 #services-home-page {
   position: relative;
@@ -467,10 +464,8 @@ button {
 }
 
 .hamburger {
-  position: absolute;
+  position: relative;
   z-index: 999999;
-  top: -16px;
-  right: 65px;
   background: transparent;
   cursor: pointer;
 }
@@ -481,9 +476,7 @@ button {
 .hamburger .hamburger--container .hamburger--bars {
   height: 2px;
   width: 1.5em;
-  background: black;
-  position: absolute;
-  top: 1em;
+  background: white;
   transition: 0.3s ease;
 }
 .hamburger .hamburger--container .hamburger--bars:before {
@@ -1264,6 +1257,10 @@ img {
   }
 }
 @media screen and (max-width: 992px) {
+  #header ul li .dropdown {
+    left: -100px;
+  }
+
   #footer p,
 #footer li a,
 #footer span {

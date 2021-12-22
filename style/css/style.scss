@@ -227,14 +227,13 @@ button {
 //   z-index: -1;
 // }
 
-
 .error-imgs {
   width: 500px;
-	&:not(.animated) {
-		.animable {
-			opacity: 0;
-		}
-	}
+  &:not(.animated) {
+    .animable {
+      opacity: 0;
+    }
+  }
 }
 
 .header-main {
@@ -315,15 +314,9 @@ button {
       }
     }
 
-    .navbar-dropdown {
-      .dropdown {
-        a {
-          &:hover {
-            padding-left: 30px;
-          }
-        }
-      }
-    }
+    // .navbar-dropdown {
+    //   // a i{width: 20px;}
+    // }
   }
 }
 #services-home-page {
@@ -539,10 +532,10 @@ button {
 }
 
 .hamburger {
-  position: absolute;
+  position: relative;
   z-index: $z;
-  top: -16px;
-  right: 65px;
+  // top: -16px;
+  // right: 65px;
   background: transparent;
   cursor: pointer;
 
@@ -553,9 +546,9 @@ button {
     .hamburger--bars {
       height: 2px;
       width: 1.5em;
-      background: rgb(0, 0, 0);
-      position: absolute;
-      top: 1em;
+      background: rgb(255, 255, 255);
+      // position: absolute;
+      // top: 1em;
       transition: 0.3s ease;
 
       &:before {
@@ -1441,6 +1434,15 @@ img {
   // }
 }
 @media screen and (max-width: 992px) {
+  #header {
+    ul {
+      li {
+        .dropdown {
+          left: -100px;
+        }
+      }
+    }
+  }
   #footer {
     p,
     li a,
