@@ -481,7 +481,7 @@ button {
 .hamburger .hamburger--container .hamburger--bars {
   height: 2px;
   width: 1.5em;
-  background: white;
+  background: black;
   position: absolute;
   top: 1em;
   transition: 0.3s ease;
