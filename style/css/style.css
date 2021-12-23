@@ -60,6 +60,14 @@ body:before {
   margin-top: 150px;
 }
 
+.w-170 {
+  width: 170px;
+}
+
+.w-80 {
+  width: 80px;
+}
+
 .color-orange {
   color: #ffa217;
 }
@@ -170,9 +178,18 @@ button {
 }
 
 .page-link {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
   color: #000;
   background-color: transparent;
   border: 0;
+  vertical-align: middle;
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
 }
 
 .page-link:hover {
@@ -182,6 +199,7 @@ button {
   color: white;
   padding-left: 14px;
   padding-right: 14px;
+  transition: 0.2s all;
 }
 
 .error-imgs {
@@ -241,28 +259,42 @@ button {
   transform: translateY(0px);
 }
 #header ul li a {
+  width: 100%;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
 }
-#header ul li .dropdown {
+
+.dropdown {
+  border-radius: 10px;
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  padding: 20px 0;
+  padding: 10px 0;
   top: 30px;
   transform: translateY(50px);
   left: 0;
-  width: 130px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.16);
   z-index: 111;
   transition: 0.4s all;
 }
-#header ul li .dropdown li a {
-  color: #000;
-  padding: 10px;
-  font-weight: 400;
+.dropdown li {
+  display: block;
+  width: 100%;
+}
+.dropdown li a {
+  width: 100%;
+  color: #000 !important;
+  padding: 5px 10px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.dropdown li a:hover {
+  background: #c6c6c6;
+  border-radius: 30px;
 }
 
 #services-home-page {
